@@ -564,20 +564,17 @@ section h2{
 
 
 .logo img{
-    width:45px;
+    width:42px;
     height:auto;
-    }
+}
 
 
 .logo span{
-    display:inline-block;
-    font-size:24px;
+    font-size:22px;
     font-weight:700;
+    letter-spacing:1px;
     color:#10384d;
-    white-space:nowrap;
-    line-height:1;
 }
-
 
 @media(max-width:768px){
 
