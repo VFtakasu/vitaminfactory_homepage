@@ -910,3 +910,116 @@ section h2{
 }
 
 }
+
+
+/* =====================================
+   Footer Upgrade
+===================================== */
+
+footer{
+
+    background:#082232;
+
+    color:#d8e3ea;
+
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr;
+
+    gap:60px;
+
+    align-items:start;
+
+}
+
+.footer-company .logo{
+
+    margin-bottom:25px;
+
+}
+
+.footer-message{
+
+    max-width:380px;
+
+    color:#b9c8d2;
+
+}
+
+footer h4{
+
+    color:#fff;
+
+    margin-bottom:20px;
+
+    font-size:18px;
+
+}
+
+footer ul li{
+
+    margin-bottom:12px;
+
+}
+
+footer a{
+
+    color:#d8e3ea;
+
+}
+
+footer a:hover{
+
+    color:#18b57b;
+
+}
+
+footer p{
+
+    margin-bottom:12px;
+
+}
+
+.copyright{
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    margin-top:60px;
+
+    padding-top:25px;
+
+    text-align:center;
+
+    font-size:14px;
+
+    color:#9db2bf;
+
+}
+
+@media(max-width:900px){
+
+.footer-grid{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}
+
+.footer-company .logo{
+
+    justify-content:center;
+
+}
+
+.footer-message{
+
+    margin:0 auto;
+
+}
+
+}
