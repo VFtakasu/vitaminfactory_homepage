@@ -62,23 +62,26 @@ header .container{
     padding:18px 0;
 }
 
-.logo{
+/* Header Logo */
+
+header .logo{
     display:flex;
     align-items:center;
-    gap:12px;
+    gap:10px;
     font-size:26px;
     font-weight:800;
     color:#0f5d48;
 }
 
 
-.logo img{
+header .logo img{
     width:45px;
-    height:auto;
+    height:45px;
+    object-fit:contain;
 }
 
 
-.logo span{
+header .logo span{
     white-space:nowrap;
 }
 nav ul{
