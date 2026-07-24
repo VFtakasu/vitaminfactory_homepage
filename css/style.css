@@ -564,17 +564,20 @@ section h2{
 
 
 .logo img{
-    width:42px;
+    width:45px;
     height:auto;
-}
+    }
 
 
 .logo span{
-    font-size:22px;
+    display:inline-block;
+    font-size:24px;
     font-weight:700;
-    letter-spacing:1px;
     color:#10384d;
+    white-space:nowrap;
+    line-height:1;
 }
+
 
 @media(max-width:768px){
 
@@ -586,39 +589,5 @@ section h2{
 .logo span{
     font-size:18px;
 }
-
-}
-
-.hero{
-
-height:600px;
-
-}
-
-
-
-.hero h1{
-
-font-size:34px;
-
-}
-
-
-
-.hero-text{
-
-font-size:15px;
-
-}
-
-
-
-.hero-buttons{
-
-flex-direction:column;
-
-}
-
-
 
 }
