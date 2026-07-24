@@ -796,6 +796,8 @@ nav a:hover{
     max-width:760px;
     margin:0 auto 40px;
     color:#eef5f7;
+   text-align:center;
+line-height:2;
 }
 
 .cta-buttons{
