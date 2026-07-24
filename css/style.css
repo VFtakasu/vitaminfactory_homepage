@@ -555,7 +555,7 @@ section h2{
 ===================================== */
 
 .logo img{
-    width:220px;
+    width:160px;
     height:auto;
     display:block;
 }
@@ -564,7 +564,7 @@ section h2{
 @media(max-width:768px){
 
 .logo img{
-    width:170px;
+    width:130px;
 }
 
 }
