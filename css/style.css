@@ -396,9 +396,8 @@ nav ul{
 }
 
 .hero{
-    padding:120px 0 80px;
-    height:auto;
-}
+    height:100vh;
+    padding-top:90px;}
 
 .hero h1{
     font-size:34px;
