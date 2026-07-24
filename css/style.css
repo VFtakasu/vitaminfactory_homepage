@@ -625,3 +625,32 @@ section h2{
     color:#56636f;
     line-height:1.9;
 }
+
+/* =====================================
+   Service Section Upgrade
+===================================== */
+
+.service{
+    background:#ffffff;
+}
+
+.service-box{
+    border-top:5px solid #18b57b;
+    transition:all .3s ease;
+}
+
+.service-box:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+}
+
+.service-box h3{
+    font-size:24px;
+    margin-bottom:18px;
+    color:#10384d;
+}
+
+.service-box p{
+    color:#666;
+    line-height:1.9;
+}
