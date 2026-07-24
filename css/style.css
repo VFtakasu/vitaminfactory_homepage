@@ -575,3 +575,14 @@ section h2{
 .hero-content{
     transform:translateY(20px);
 }
+
+.hero .container{
+    display:flex;
+    justify-content:center;
+}
+
+
+.hero-content{
+    text-align:center;
+}
+
