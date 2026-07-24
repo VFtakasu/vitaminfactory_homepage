@@ -1029,19 +1029,19 @@ footer p{
    Footer Logo Fix
 ===================================== */
 
-.footer-company .logo{
+.footer-logo{
     display:flex;
     align-items:center;
     gap:10px;
     justify-content:flex-start;
 }
 
-.footer-company .logo img{
+.footer-logo img{
     width:36px;
     height:auto;
 }
 
-.footer-company .logo span{
+.footer-logo span{
     font-size:20px;
     font-weight:700;
     color:#ffffff;
@@ -1049,7 +1049,7 @@ footer p{
 
 @media(max-width:900px){
 
-.footer-company .logo{
+.footer-logo{
     justify-content:center;
 }
 
