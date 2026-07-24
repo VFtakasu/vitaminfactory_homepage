@@ -1023,3 +1023,34 @@ footer p{
 }
 
 }
+
+
+/* =====================================
+   Footer Logo Fix
+===================================== */
+
+.footer-company .logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    justify-content:flex-start;
+}
+
+.footer-company .logo img{
+    width:36px;
+    height:auto;
+}
+
+.footer-company .logo span{
+    font-size:20px;
+    font-weight:700;
+    color:#ffffff;
+}
+
+@media(max-width:900px){
+
+.footer-company .logo{
+    justify-content:center;
+}
+
+}
