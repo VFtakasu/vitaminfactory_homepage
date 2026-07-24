@@ -550,3 +550,21 @@ section h2{
 }
 
 }
+/* =====================================
+   Company Logo
+===================================== */
+
+.logo img{
+    width:220px;
+    height:auto;
+    display:block;
+}
+
+
+@media(max-width:768px){
+
+.logo img{
+    width:170px;
+}
+
+}
