@@ -566,3 +566,13 @@ section h2{
 }
 
 }
+/* Hero Header Space Adjustment */
+
+.hero{
+    padding-top:100px;
+}
+
+
+.hero-content{
+    transform:translateY(20px);
+}
