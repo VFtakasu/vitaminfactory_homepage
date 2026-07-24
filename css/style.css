@@ -594,3 +594,34 @@ section h2{
     text-align:center;
 }
 
+/* =====================================
+   About Section Upgrade
+===================================== */
+
+.about{
+    background:#f8fbfc;
+}
+
+.about-card{
+    background:#ffffff;
+    border:1px solid #e7eef2;
+    border-radius:20px;
+    padding:40px 30px;
+    transition:all .3s ease;
+}
+
+.about-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 40px rgba(16,56,77,.12);
+}
+
+.about-card h3{
+    font-size:24px;
+    margin-bottom:18px;
+    color:#10384d;
+}
+
+.about-card p{
+    color:#56636f;
+    line-height:1.9;
+}
