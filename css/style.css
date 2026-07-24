@@ -63,11 +63,24 @@ header .container{
 }
 
 .logo{
-    font-size:30px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:26px;
     font-weight:800;
     color:#0f5d48;
 }
 
+
+.logo img{
+    width:45px;
+    height:auto;
+}
+
+
+.logo span{
+    white-space:nowrap;
+}
 nav ul{
     display:flex;
     gap:35px;
