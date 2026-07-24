@@ -405,3 +405,148 @@ section h2{
 }
 
 }
+/* =====================================
+   Sub Pages
+   company / service / oem / contact
+===================================== */
+
+
+/* Page Hero */
+
+.page-hero{
+    height:380px;
+    background:linear-gradient(135deg,#10384d,#0f8b6b);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    text-align:center;
+    margin-top:80px;
+}
+
+.page-hero h1{
+    font-size:48px;
+    letter-spacing:3px;
+    margin-bottom:15px;
+}
+
+.page-hero p{
+    font-size:20px;
+}
+
+
+/* Company Table */
+
+.company-table{
+    width:100%;
+    max-width:900px;
+    margin:40px auto;
+    border-collapse:collapse;
+    background:#fff;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.company-table th,
+.company-table td{
+    padding:25px;
+    border-bottom:1px solid #eee;
+    text-align:left;
+}
+
+.company-table th{
+    width:30%;
+    background:#f4f8f7;
+    color:#10384d;
+}
+
+
+/* Contact Form */
+
+.contact-form{
+    max-width:800px;
+    margin:40px auto;
+    background:#fff;
+    padding:50px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+
+.form-group{
+    margin-bottom:25px;
+}
+
+
+.form-group label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:10px;
+    color:#10384d;
+}
+
+
+.form-group input,
+.form-group textarea{
+    width:100%;
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+    font-family:inherit;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus{
+    outline:none;
+    border-color:#0f8b6b;
+}
+
+
+/* Privacy */
+
+.privacy-content{
+    max-width:900px;
+    margin:auto;
+}
+
+
+.privacy-content h3{
+    margin-top:40px;
+    margin-bottom:15px;
+    color:#10384d;
+}
+
+
+.privacy-content p{
+    color:#555;
+}
+
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.page-hero{
+    height:280px;
+}
+
+.page-hero h1{
+    font-size:34px;
+}
+
+
+.company-table th,
+.company-table td{
+    display:block;
+    width:100%;
+}
+
+
+.contact-form{
+    padding:25px;
+}
+
+}
