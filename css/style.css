@@ -551,20 +551,40 @@ section h2{
 
 }
 /* =====================================
-   Company Logo
+   Header Logo Fix
 ===================================== */
 
-.logo img{
-    width:50px;
-    height:auto;
-    display:block;
+.logo{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
 }
 
 
-@media(max-width:50px){
+.logo img{
+    width:42px;
+    height:auto;
+}
+
+
+.logo span{
+    font-size:22px;
+    font-weight:700;
+    letter-spacing:1px;
+    color:#10384d;
+}
+
+@media(max-width:768px){
 
 .logo img{
-    width:auto;
+    width:38px;
+}
+
+
+.logo span{
+    font-size:18px;
 }
 
 }
