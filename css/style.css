@@ -404,8 +404,7 @@ section h2{
     font-size:30px;
 }
 
-}
-/* =====================================
+}/* =====================================
    Sub Pages
    company / service / oem / contact
 ===================================== */
@@ -547,24 +546,6 @@ section h2{
 
 .contact-form{
     padding:25px;
-}
-
-}
-/* =====================================
-   Company Logo
-===================================== */
-
-.logo img{
-    width:50px;
-    height:auto;
-    display:block;
-}
-
-
-@media(max-width:50px){
-
-.logo img{
-    width:auto;
 }
 
 }
