@@ -1,85 +1,100 @@
-/* =====================================
+/* ======================================
    Vitamin Factory
    main.js
-===================================== */
+====================================== */
 
-document.addEventListener("DOMContentLoaded", () => {
+// =========================
+// Fade Up Animation
+// =========================
 
-    /* ------------------------------
-       ヘッダー背景変更
-    ------------------------------ */
+const fadeElements = document.querySelectorAll(
+".about-card, .service-box, .strength-card, .flow-item, .stat-card, .cta"
+);
 
-    const header = document.querySelector("header");
+const observer = new IntersectionObserver((entries)=>{
 
-    window.addEventListener("scroll", () => {
+    entries.forEach(entry=>{
 
-        if (window.scrollY > 80) {
-            header.style.background = "rgba(255,255,255,0.98)";
-            header.style.boxShadow = "0 8px 20px rgba(0,0,0,.08)";
-        } else {
-            header.style.background = "rgba(255,255,255,.95)";
-            header.style.boxShadow = "none";
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("show");
+
         }
 
     });
 
-    /* ------------------------------
-       スクロールアニメーション
-    ------------------------------ */
+},{
+    threshold:0.15
+});
 
-    const targets = document.querySelectorAll(
-        ".about-card, .service-box, .strength-card, .flow-item"
-    );
+fadeElements.forEach(el=>{
 
-    const observer = new IntersectionObserver((entries) => {
+    el.classList.add("fade-up");
 
-        entries.forEach(entry => {
+    observer.observe(el);
 
-            if (entry.isIntersecting) {
+});
 
-                entry.target.style.opacity = "1";
-                entry.target.style.transform = "translateY(0)";
+// =========================
+// Back To Top
+// =========================
 
-            }
+const pageTop=document.getElementById("page-top");
 
-        });
+window.addEventListener("scroll",()=>{
 
-    }, {
-        threshold: 0.15
-    });
+    if(window.scrollY>300){
 
-    targets.forEach(item => {
+        pageTop.classList.add("show");
 
-        item.style.opacity = "0";
-        item.style.transform = "translateY(40px)";
-        item.style.transition = "all .8s ease";
+    }else{
 
-        observer.observe(item);
+        pageTop.classList.remove("show");
 
-    });
+    }
 
-    /* ------------------------------
-       スムーズスクロール
-    ------------------------------ */
+});
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+// =========================
+// Smooth Scroll
+// =========================
 
-        anchor.addEventListener("click", function (e) {
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
 
-            const target = document.querySelector(this.getAttribute("href"));
+    anchor.addEventListener("click",function(e){
 
-            if (target) {
+        const target=document.querySelector(this.getAttribute("href"));
 
-                e.preventDefault();
+        if(!target) return;
 
-                target.scrollIntoView({
-                    behavior: "smooth"
-                });
+        e.preventDefault();
 
-            }
+        target.scrollIntoView({
+
+            behavior:"smooth"
 
         });
 
     });
+
+});
+
+// =========================
+// Header Shadow
+// =========================
+
+const header=document.querySelector("header");
+
+window.addEventListener("scroll",()=>{
+
+    if(window.scrollY>20){
+
+        header.style.boxShadow="0 8px 25px rgba(0,0,0,.08)";
+
+    }else{
+
+        header.style.boxShadow="none";
+
+    }
 
 });
