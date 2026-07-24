@@ -728,3 +728,92 @@ section h2{
     line-height:1.9;
 
 }
+
+
+/* =====================================
+   Flow Upgrade
+===================================== */
+
+.flow{
+
+    background:#f8fbfc;
+
+}
+
+.flow-list{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+    margin-top:50px;
+
+}
+
+.flow-item{
+
+    position:relative;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    border:1px solid #e6edf2;
+
+    transition:.35s;
+
+}
+
+.flow-item:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 45px rgba(16,56,77,.12);
+
+}
+
+.flow-item h3{
+
+    margin:20px 0 15px;
+
+    color:#10384d;
+
+}
+
+.flow-item p{
+
+    color:#666;
+
+}
+
+.number{
+
+    width:70px;
+
+    height:70px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#18b57b,#0f8b6b);
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:22px;
+
+    font-weight:700;
+
+}
