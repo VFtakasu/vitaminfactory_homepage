@@ -654,3 +654,77 @@ section h2{
     color:#666;
     line-height:1.9;
 }
+
+/* =====================================
+   Strength Upgrade
+===================================== */
+
+.strength{
+    background:#f7fbfc;
+}
+
+.strength-grid{
+    gap:35px;
+}
+
+.strength-card{
+
+    text-align:center;
+
+    padding:45px 35px;
+
+    border:1px solid #e8eef2;
+
+    transition:.35s;
+
+}
+
+.strength-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 45px rgba(16,56,77,.12);
+
+}
+
+.strength-icon{
+
+    width:80px;
+
+    height:80px;
+
+    margin:0 auto 25px;
+
+    border-radius:50%;
+
+    background:#18b57b;
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:36px;
+
+}
+
+.strength-card h3{
+
+    font-size:24px;
+
+    margin-bottom:18px;
+
+    color:#10384d;
+
+}
+
+.strength-card p{
+
+    color:#666;
+
+    line-height:1.9;
+
+}
