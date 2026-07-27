@@ -334,6 +334,45 @@ text-shadow:
 }
 .hero-points{
 
+    margin-top:55px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:22px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-points span{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:12px 24px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    color:#fff;
+
+    font-weight:600;
+
+    font-size:15px;
+
+}
+.hero-points{
+
     margin-top:60px;
 
     display:flex;
@@ -1152,6 +1191,20 @@ section h2{
     flex-direction:column;
 
 }
+.hero-points{
+
+    gap:12px;
+
+}
+
+.hero-points span{
+
+    width:100%;
+
+    font-size:14px;
+
+}
+   
 
 .btn-green,
 
