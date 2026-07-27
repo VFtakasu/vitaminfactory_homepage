@@ -234,29 +234,31 @@ nav a:hover{
 
 .hero{
 
-    position:relative;
+position:relative;
 
-    min-height:100vh;
+min-height:100vh;
 
-    display:flex;
+display:flex;
 
-    justify-content:center;
+justify-content:center;
 
-    align-items:center;
+align-items:center;
 
-    overflow:hidden;
+overflow:hidden;
 
-    color:#fff;
+text-align:center;
 
-    text-align:center;
+color:#fff;
 
-    background:
-    linear-gradient(
-    rgba(16,56,77,.72),
-    rgba(16,56,77,.72)
-    ),
-    url("../images/hero.jpg")
-    center center/cover no-repeat;
+background:
+linear-gradient(
+rgba(16,56,77,.45),
+rgba(16,56,77,.45)
+),
+url("../images/hero.jpg")
+center center/cover no-repeat;
+
+background-attachment:fixed;
 
 }
 
