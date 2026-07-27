@@ -501,6 +501,10 @@ transform:translateX(-50%) translateY(10px);
 
 .service-box{
 
+    position:relative;
+    
+    overflow:hidden;
+    
     background:#fff;
 
     border-radius:20px;
@@ -515,20 +519,60 @@ transform:translateX(-50%) translateY(10px);
 
 }
 
+.service-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        #18b57b,
+        #52d39b
+    );
+
+}
+
 .service-box:hover{
 
     transform:translateY(-10px);
 
+    box-shadow:0 25px 45px rgba(0,0,0,.12);
+
 }
+
 
 .service-icon{
 
-    font-size:44px;
+    width:85px;
 
-    margin-bottom:20px;
+    height:85px;
+
+    margin:0 auto 25px;
+
+    border-radius:50%;
+
+    background:#e8f8f1;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:38px;
+
+    transition:.3s;
 
 }
-
 .service-box h3{
 
     color:#10384d;
@@ -544,6 +588,21 @@ transform:translateX(-50%) translateY(10px);
     color:#60707c;
 
 }
+
+.service-box:hover .service-icon{
+
+    background:#18b57b;
+
+    transform:scale(1.08);
+
+}
+
+.service-box:hover .service-icon{
+
+    color:#fff;
+
+}
+
 
 /* =====================================
    Strength
