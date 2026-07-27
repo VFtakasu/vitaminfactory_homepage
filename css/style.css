@@ -332,6 +332,40 @@ text-shadow:
     flex-wrap:wrap;
 
 }
+.hero-points{
+
+    margin-top:60px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:35px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-points span{
+
+    background:rgba(255,255,255,.15);
+
+    color:#fff;
+
+    padding:10px 22px;
+
+    border-radius:50px;
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    font-size:15px;
+
+    letter-spacing:1px;
+
+}
+
 
 /* ---------- Buttons ---------- */
 
@@ -1078,6 +1112,20 @@ nav ul{
 }
 
 @media(max-width:768px){
+
+   .hero-points{
+
+    gap:15px;
+
+}
+
+.hero-points span{
+
+    font-size:13px;
+
+    padding:8px 16px;
+
+}
 
 section{
 
