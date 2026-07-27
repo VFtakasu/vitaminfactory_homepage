@@ -344,24 +344,27 @@ background-attachment:fixed;
 
 .btn-green{
 
-    background:#18b57b;
+background:#18b57b;
 
-    color:#fff;
+padding:18px 44px;
 
-    padding:16px 40px;
+border-radius:60px;
 
-    border-radius:50px;
+font-weight:700;
 
-    font-weight:700;
+box-shadow:
+0 10px 30px rgba(24,181,123,.35);
 
 }
 
 .btn-green:hover{
 
-    transform:translateY(-4px);
+transform:translateY(-5px);
+
+box-shadow:
+0 20px 45px rgba(24,181,123,.45);
 
 }
-
 .btn-white{
 
     background:#fff;
