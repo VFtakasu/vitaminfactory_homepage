@@ -2154,3 +2154,566 @@ section h2{
 }
 
 }
+/* =====================================
+   OEM PAGE
+===================================== */
+
+/* ---------- OEM Hero ---------- */
+
+.oem-hero{
+
+    background:
+    linear-gradient(
+    rgba(16,56,77,.55),
+    rgba(16,56,77,.55)
+    ),
+    url("../images/oem-hero.jpg")
+    center center/cover no-repeat;
+
+}
+
+/* ---------- Page Hero ---------- */
+
+.page-hero{
+
+    position:relative;
+
+    min-height:65vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    color:#fff;
+
+    overflow:hidden;
+
+}
+
+.page-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        135deg,
+        rgba(15,139,107,.15),
+        rgba(16,56,77,.45)
+    );
+
+}
+
+.page-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+.page-content h1{
+
+    font-size:58px;
+
+    line-height:1.3;
+
+    margin-bottom:30px;
+
+    font-weight:900;
+
+}
+
+.page-content p{
+
+    font-size:20px;
+
+    line-height:2;
+
+    color:#eef5f7;
+
+}
+
+/* ---------- OEM Detail ---------- */
+
+.service-detail{
+
+    padding:110px 0;
+
+}
+
+.service-row{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.service-image img{
+
+    width:100%;
+
+    border-radius:24px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+.service-content h2{
+
+    margin-bottom:25px;
+
+    color:#10384d;
+
+}
+
+.service-content p{
+
+    color:#60707c;
+
+    line-height:2;
+
+    margin-bottom:25px;
+
+}
+/* =====================================
+   OEM Flow
+===================================== */
+
+.flow{
+
+    background:#f7fafb;
+
+}
+
+.flow-list{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.flow-item{
+
+    background:#ffffff;
+
+    border-radius:22px;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.flow-item:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 25px 45px rgba(0,0,0,.12);
+
+}
+
+.flow-item .number{
+
+    width:70px;
+
+    height:70px;
+
+    margin:0 auto 25px;
+
+    border-radius:50%;
+
+    background:#18b57b;
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+.flow-item h3{
+
+    color:#10384d;
+
+    font-size:24px;
+
+    margin-bottom:18px;
+
+}
+
+.flow-item p{
+
+    color:#60707c;
+
+    line-height:1.9;
+
+}
+
+/* =====================================
+   Product Type
+===================================== */
+
+.product-type{
+
+    background:#ffffff;
+
+}
+
+.type-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:35px;
+
+    margin-top:60px;
+
+}
+
+.type-card{
+
+    background:#ffffff;
+
+    border-radius:22px;
+
+    padding:45px 30px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.type-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 25px 45px rgba(0,0,0,.12);
+
+}
+
+.type-icon{
+
+    width:80px;
+
+    height:80px;
+
+    margin:0 auto 25px;
+
+    border-radius:50%;
+
+    background:#18b57b;
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:36px;
+
+}
+
+.type-card h3{
+
+    color:#10384d;
+
+    margin-bottom:18px;
+
+}
+
+.type-card p{
+
+    color:#60707c;
+
+    line-height:1.9;
+
+}
+
+/* =====================================
+   OEM Strength
+===================================== */
+
+.strength{
+
+    background:#f8fbfc;
+
+}
+
+.strength-grid{
+
+    margin-top:60px;
+
+}
+/* =====================================
+   OEM FAQ
+===================================== */
+
+.history{
+
+    background:#ffffff;
+
+}
+
+.history-list{
+
+    max-width:1000px;
+
+    margin:60px auto 0;
+
+}
+
+.history-item{
+
+    display:flex;
+
+    gap:35px;
+
+    align-items:flex-start;
+
+    padding:35px 0;
+
+    border-bottom:1px solid #e7eef2;
+
+}
+
+.history-year{
+
+    min-width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    background:#18b57b;
+
+    color:#ffffff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+.history-text{
+
+    flex:1;
+
+}
+
+.history-text h3{
+
+    color:#10384d;
+
+    font-size:24px;
+
+    margin-bottom:15px;
+
+}
+
+.history-text p{
+
+    color:#60707c;
+
+    line-height:2;
+
+}
+
+/* =====================================
+   OEM Responsive
+===================================== */
+
+@media(max-width:900px){
+
+.page-hero{
+
+    min-height:55vh;
+
+    padding:140px 0 90px;
+
+}
+
+.page-content h1{
+
+    font-size:46px;
+
+}
+
+.page-content p{
+
+    font-size:18px;
+
+}
+
+.service-row{
+
+    grid-template-columns:1fr;
+
+    gap:45px;
+
+}
+
+.service-content{
+
+    text-align:center;
+
+}
+
+.service-list{
+
+    display:inline-block;
+
+    text-align:left;
+
+}
+
+.service-image img{
+
+    max-width:700px;
+
+    margin:0 auto;
+
+}
+
+.history-item{
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.page-content h1{
+
+    font-size:36px;
+
+}
+
+.page-content p{
+
+    font-size:16px;
+
+}
+
+.service-detail{
+
+    padding:80px 0;
+
+}
+
+.service-content h2{
+
+    font-size:32px;
+
+}
+
+.flow-list,
+
+.type-grid,
+
+.strength-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.history-year{
+
+    width:70px;
+
+    height:70px;
+
+    min-width:70px;
+
+    font-size:22px;
+
+}
+
+.history-text h3{
+
+    font-size:22px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.page-content h1{
+
+    font-size:30px;
+
+}
+
+.page-content p{
+
+    font-size:15px;
+
+}
+
+.service-content h2{
+
+    font-size:28px;
+
+}
+
+.history-text h3{
+
+    font-size:20px;
+
+}
+
+.history-text p{
+
+    font-size:15px;
+
+}
+
+}
