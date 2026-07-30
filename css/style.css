@@ -2029,3 +2029,128 @@ section h2{
     margin-top:60px;
 
 }
+/* =====================================
+   Service Responsive
+===================================== */
+
+@media(max-width:900px){
+
+.service-row{
+
+    grid-template-columns:1fr;
+
+    gap:40px;
+
+}
+
+.service-row.reverse .service-image{
+
+    order:1;
+
+}
+
+.service-row.reverse .service-content{
+
+    order:2;
+
+}
+
+.service-content{
+
+    text-align:center;
+
+}
+
+.service-list{
+
+    display:inline-block;
+
+    text-align:left;
+
+    margin-top:25px;
+
+}
+
+.service-image img{
+
+    max-width:700px;
+
+    margin:0 auto;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.service-detail{
+
+    padding:80px 0;
+
+}
+
+.service-content h2{
+
+    font-size:32px;
+
+}
+
+.service-content p{
+
+    font-size:16px;
+
+}
+
+.type-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.type-card{
+
+    padding:35px 25px;
+
+}
+
+.type-icon{
+
+    width:70px;
+
+    height:70px;
+
+    font-size:30px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.service-content h2{
+
+    font-size:28px;
+
+}
+
+.service-list li{
+
+    font-size:15px;
+
+    margin-bottom:14px;
+
+}
+
+.type-card h3{
+
+    font-size:22px;
+
+}
+
+.type-card p{
+
+    font-size:15px;
+
+}
+
+}
