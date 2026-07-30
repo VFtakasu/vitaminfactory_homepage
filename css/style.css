@@ -1793,3 +1793,239 @@ section h2{
 }
 
 }
+/* =====================================
+   SERVICE PAGE
+===================================== */
+
+/* ---------- Hero ---------- */
+
+.service-hero{
+
+    background:
+    linear-gradient(
+    rgba(16,56,77,.55),
+    rgba(16,56,77,.55)
+    ),
+    url("../images/service-hero.jpg")
+    center center/cover no-repeat;
+
+}
+
+/* ---------- Service Detail ---------- */
+
+.service-detail{
+
+    padding:110px 0;
+
+    background:#ffffff;
+
+}
+
+.service-detail.gray{
+
+    background:#f7fafb;
+
+}
+
+.service-row{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.service-row.reverse .service-image{
+
+    order:2;
+
+}
+
+.service-row.reverse .service-content{
+
+    order:1;
+
+}
+
+.service-image img{
+
+    width:100%;
+
+    border-radius:22px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+.service-content h2{
+
+    margin-bottom:25px;
+
+}
+
+.service-content p{
+
+    color:#60707c;
+
+    line-height:2;
+
+    margin-bottom:25px;
+
+}
+
+/* ---------- List ---------- */
+
+.service-list{
+
+    margin-top:30px;
+
+}
+
+.service-list li{
+
+    position:relative;
+
+    padding-left:30px;
+
+    margin-bottom:16px;
+
+    color:#24323d;
+
+    font-weight:500;
+
+}
+
+.service-list li::before{
+
+    content:"✓";
+
+    position:absolute;
+
+    left:0;
+
+    color:#18b57b;
+
+    font-weight:700;
+
+}
+/* =====================================
+   Product Type
+===================================== */
+
+.product-type{
+
+    background:#f8fbfc;
+
+}
+
+.type-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:35px;
+
+}
+
+.type-card{
+
+    background:#ffffff;
+
+    border-radius:22px;
+
+    padding:45px 30px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.type-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 25px 45px rgba(0,0,0,.12);
+
+}
+
+.type-icon{
+
+    width:80px;
+
+    height:80px;
+
+    margin:0 auto 25px;
+
+    border-radius:50%;
+
+    background:#18b57b;
+
+    color:#ffffff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:36px;
+
+}
+
+.type-card h3{
+
+    color:#10384d;
+
+    margin-bottom:18px;
+
+    font-size:24px;
+
+}
+
+.type-card p{
+
+    color:#60707c;
+
+    line-height:1.9;
+
+}
+
+/* =====================================
+   Service Feature
+===================================== */
+
+.service-feature{
+
+    background:#ffffff;
+
+}
+
+.service-feature .strength-grid{
+
+    margin-top:60px;
+
+}
+
+/* =====================================
+   Supported Products
+===================================== */
+
+.supported-products{
+
+    background:#f7fafb;
+
+}
+
+.supported-products .type-grid{
+
+    margin-top:60px;
+
+}
