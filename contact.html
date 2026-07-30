@@ -4,25 +4,33 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>お問い合わせ | 株式会社Vitamin Factory</title>
+<title>
+お問い合わせ｜株式会社Vitamin Factory
+</title>
 
-<meta name="description" content="株式会社Vitamin Factoryへのお問い合わせページです。健康食品・サプリメントOEM・ODMについてお気軽にご相談ください。">
+<meta name="description"
+content="株式会社Vitamin Factoryへのお問い合わせはこちら。健康食品・サプリメントOEM・ODMのご相談をお気軽にお問い合わせください。">
 
-<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="images/favicon.ico">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="css/style.css">
 
 </head>
 
-
 <body>
-
 
 <header>
 
@@ -30,11 +38,14 @@
 
 <a href="index.html" class="logo">
 
-<img src="images/VF_logo.png" alt="Vitamin Factory">
+<img src="images/VF_logo.png"
+alt="Vitamin Factory">
 
 <span>Vitamin Factory</span>
 
-</a><nav>
+</a>
+
+<nav>
 
 <ul>
 
@@ -46,7 +57,16 @@
 
 <li><a href="oem.html">OEM・ODM</a></li>
 
-<li><a href="contact.html" class="contact-btn">お問い合わせ</a></li>
+<li>
+
+<a href="contact.html"
+class="contact-btn">
+
+お問い合わせ
+
+</a>
+
+</li>
 
 </ul>
 
@@ -56,283 +76,195 @@
 
 </header>
 
+<!-- ==========================
+PAGE HERO
+========================== -->
 
+<section class="page-hero contact-hero">
 
-
-<section class="page-hero">
+<div class="page-overlay"></div>
 
 <div class="container">
 
-<h1>
+<div class="page-content">
+
+<p class="section-sub">
+
 CONTACT
+
+</p>
+
+<h1>
+
+お気軽に<br>
+
+お問い合わせください
+
 </h1>
 
 <p>
-お問い合わせ
+
+OEM・ODMに関するご相談や商品開発のご質問など、
+どんなことでもお気軽にお問い合わせください。
+
 </p>
+
+</div>
 
 </div>
 
 </section>
+<!-- ==========================
+CONTACT FORM
+========================== -->
 
+<section class="contact-form">
 
+    <div class="container">
 
+        <div class="section-title">
 
+            <p class="section-sub">
 
-<section>
+                CONTACT FORM
 
+            </p>
 
-<div class="container">
+            <h2>
 
+                お問い合わせフォーム
 
-<h2>
-OEM Consultation
-</h2>
+            </h2>
 
+        </div>
 
-<p class="section-lead">
+        <p class="section-lead">
 
-健康食品・サプリメントOEM、商品開発についてのご相談を承ります。
-下記フォームよりお気軽にお問い合わせください。
+            商品開発・OEM・ODM・お見積りなど、
+            お気軽にお問い合わせください。
+            内容を確認後、担当者よりご連絡いたします。
 
-</p>
+        </p>
 
+        <form class="form-area">
 
+            <div class="form-group">
 
-<div class="contact-form">
+                <label for="name">
 
+                    お名前 <span>*</span>
 
-<form action="#" method="post">
+                </label>
 
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="山田 太郎"
+                    required>
 
-<div class="form-group">
+            </div>
 
-<label>
-会社名
-</label>
+            <div class="form-group">
 
-<input type="text" name="company" placeholder="株式会社〇〇">
+                <label for="company">
 
-</div>
+                    会社名
 
+                </label>
 
+                <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    placeholder="株式会社〇〇">
 
-<div class="form-group">
+            </div>
 
-<label>
-お名前
-</label>
+            <div class="form-group">
 
-<input type="text" name="name" placeholder="山田 太郎">
+                <label for="email">
 
-</div>
+                    メールアドレス <span>*</span>
 
+                </label>
 
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="example@example.com"
+                    required>
 
-<div class="form-group">
+            </div>
 
-<label>
-メールアドレス
-</label>
+            <div class="form-group">
 
-<input type="email" name="email" placeholder="example@example.com">
+                <label for="tel">
 
-</div>
+                    電話番号
 
+                </label>
 
+                <input
+                    type="tel"
+                    id="tel"
+                    name="tel"
+                    placeholder="03-1234-5678">
 
-<div class="form-group">
+            </div>
 
-<label>
-電話番号
-</label>
+            <div class="form-group">
 
-<input type="tel" name="tel" placeholder="000-0000-0000">
+                <label for="category">
 
-</div>
+                    お問い合わせ内容
 
+                </label>
 
+                <select id="category" name="category">
 
-<div class="form-group">
+                    <option>OEM・ODMについて</option>
 
-<label>
-お問い合わせ内容
-</label>
+                    <option>商品開発について</option>
 
-<textarea name="message" rows="8" placeholder="お問い合わせ内容をご入力ください"></textarea>
+                    <option>お見積りについて</option>
 
-</div>
+                    <option>その他</option>
 
+                </select>
 
+            </div>
 
-<button type="submit" class="btn-green">
+            <div class="form-group">
 
-送信する
+                <label for="message">
 
-</button>
+                    ご相談内容 <span>*</span>
 
+                </label>
 
-</form>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="8"
+                    placeholder="お問い合わせ内容をご入力ください。"
+                    required></textarea>
 
+            </div>
 
-</div>
+            <div class="form-submit">
 
+                <button type="submit" class="btn-green">
 
-</div>
+                    お問い合わせを送信する
 
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
 
 </section>
-
-
-
-
-
-
-<section class="flow">
-
-
-<div class="container">
-
-
-<h2>
-Contact Information
-</h2>
-
-
-
-<div class="strength-grid">
-
-
-<div class="strength-card">
-
-<h3>
-メール
-</h3>
-
-<p>
-info@vitaminfactory.jp
-</p>
-
-</div>
-
-
-
-<div class="strength-card">
-
-<h3>
-受付時間
-</h3>
-
-<p>
-平日 9:00〜17:00
-</p>
-
-</div>
-
-
-
-<div class="strength-card">
-
-<h3>
-対応内容
-</h3>
-
-<p>
-OEM・ODM・商品開発相談
-</p>
-
-</div>
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-<footer>
-
-
-<div class="container footer-grid">
-
-
-<div>
-
-<h3>
-Vitamin Factory
-</h3>
-
-<p>
-健康食品・サプリメントOEM・ODMメーカー
-</p>
-
-</div>
-
-
-
-<div>
-
-<h4>
-MENU
-</h4>
-
-<ul>
-
-<li><a href="company.html">会社概要</a></li>
-
-<li><a href="service.html">事業内容</a></li>
-
-<li><a href="oem.html">OEM・ODM</a></li>
-
-<li><a href="contact.html">お問い合わせ</a></li>
-
-</ul>
-
-</div>
-
-
-
-<div>
-
-<h4>
-CONTACT
-</h4>
-
-<p>
-info@vitaminfactory.jp
-</p>
-
-</div>
-
-
-</div>
-
-
-
-<div class="copyright">
-
-<p>
-© 2026 Vitamin Factory All Rights Reserved.
-</p>
-
-</div>
-
-
-</footer>
-
-
-
-<script src="js/main.js"></script>
-
-
-</body>
-
-</html>
