@@ -1464,3 +1464,332 @@ section h2{
 }
 
 }
+
+/* =====================================
+   Company Profile
+===================================== */
+
+.company-profile{
+
+    background:#f8fbfc;
+
+}
+
+.company-table{
+
+    width:100%;
+
+    max-width:900px;
+
+    margin:0 auto;
+
+    border-collapse:collapse;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.company-table th{
+
+    width:220px;
+
+    background:#10384d;
+
+    color:#fff;
+
+    padding:22px 28px;
+
+    text-align:left;
+
+    font-weight:700;
+
+}
+
+.company-table td{
+
+    padding:22px 28px;
+
+    border-bottom:1px solid #eef3f5;
+
+    color:#5f6f79;
+
+    line-height:1.9;
+
+}
+
+.company-table tr:last-child td{
+
+    border-bottom:none;
+
+}
+
+/* =====================================
+   Philosophy
+===================================== */
+
+.philosophy{
+
+    background:#ffffff;
+
+}
+
+.philosophy-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:35px;
+
+}
+
+.philosophy-card{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:45px 30px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.philosophy-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 25px 45px rgba(0,0,0,.12);
+
+}
+
+.philosophy-icon{
+
+    width:85px;
+
+    height:85px;
+
+    margin:0 auto 25px;
+
+    border-radius:50%;
+
+    background:#18b57b;
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:38px;
+
+}
+
+.philosophy-card h3{
+
+    color:#10384d;
+
+    font-size:26px;
+
+    margin-bottom:18px;
+
+}
+
+.philosophy-card p{
+
+    color:#60707c;
+
+    line-height:1.9;
+
+}
+/* =====================================
+   History
+===================================== */
+
+.history{
+
+    background:#f7fafb;
+
+}
+
+.history-list{
+
+    max-width:900px;
+
+    margin:0 auto;
+
+}
+
+.history-item{
+
+    display:grid;
+
+    grid-template-columns:150px 1fr;
+
+    gap:40px;
+
+    padding:35px 0;
+
+    border-bottom:1px solid #e4ecef;
+
+}
+
+.history-item:last-child{
+
+    border-bottom:none;
+
+}
+
+.history-year{
+
+    font-size:28px;
+
+    font-weight:800;
+
+    color:#18b57b;
+
+}
+
+.history-text h3{
+
+    color:#10384d;
+
+    margin-bottom:12px;
+
+    font-size:24px;
+
+}
+
+.history-text p{
+
+    color:#60707c;
+
+    line-height:1.9;
+
+}
+
+/* =====================================
+   Access
+===================================== */
+
+.access{
+
+    background:#ffffff;
+
+}
+
+.access-grid{
+
+    display:grid;
+
+    grid-template-columns:1.2fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+.access-map img{
+
+    width:100%;
+
+    border-radius:20px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+.access-info h3{
+
+    color:#10384d;
+
+    font-size:32px;
+
+    margin-bottom:25px;
+
+}
+
+.access-info p{
+
+    margin-bottom:20px;
+
+    color:#60707c;
+
+    line-height:1.9;
+
+}
+
+.access-info .btn-green{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+}
+
+/* =====================================
+   Company Responsive
+===================================== */
+
+@media(max-width:900px){
+
+.message-grid,
+
+.access-grid{
+
+    grid-template-columns:1fr;
+
+    gap:40px;
+
+}
+
+.history-item{
+
+    grid-template-columns:1fr;
+
+    gap:15px;
+
+}
+
+.history-year{
+
+    font-size:22px;
+
+}
+
+.company-table th,
+
+.company-table td{
+
+    display:block;
+
+    width:100%;
+
+}
+
+.company-table th{
+
+    padding:18px 22px;
+
+}
+
+.company-table td{
+
+    padding:18px 22px 28px;
+
+}
+
+}
