@@ -3305,3 +3305,378 @@ section h2{
 }
 
 }
+/*======================================
+ COMPANY PAGE
+======================================*/
+
+.company-message{
+
+    padding:100px 0;
+
+    background:#ffffff;
+
+}
+
+.message-grid{
+
+    display:grid;
+
+    grid-template-columns:420px 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.message-photo img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:18px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+.message-text{
+
+    color:#555;
+
+}
+
+.message-text p{
+
+    margin-bottom:24px;
+
+    line-height:2;
+
+    font-size:17px;
+
+}
+
+.signature{
+
+    margin-top:40px;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:#12385b;
+
+    line-height:1.8;
+
+}
+/*======================================
+ COMPANY PROFILE
+======================================*/
+
+.company-profile{
+
+    background:#f8fafb;
+
+}
+
+.profile-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.profile-table th{
+
+    width:220px;
+
+    background:#0d3557;
+
+    color:#fff;
+
+    padding:22px;
+
+    text-align:left;
+
+    font-weight:700;
+
+}
+
+.profile-table td{
+
+    padding:22px 26px;
+
+    border-bottom:1px solid #e8ecef;
+
+    color:#555;
+
+    line-height:1.9;
+
+}
+
+.profile-table tr:last-child td{
+
+    border-bottom:none;
+
+}
+
+.profile-table a{
+
+    color:#0d3557;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+}
+
+.profile-table a:hover{
+
+    color:#1b8c57;
+
+}
+
+/*======================================
+ MISSION
+======================================*/
+
+.mission{
+
+    background:#ffffff;
+
+}
+
+.mission-box{
+
+    max-width:900px;
+
+    margin:0 auto;
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:70px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.mission-box h3{
+
+    font-size:36px;
+
+    color:#12385b;
+
+    margin-bottom:25px;
+
+}
+
+.mission-box p{
+
+    font-size:18px;
+
+    color:#555;
+
+    line-height:2;
+
+}
+/*======================================
+ VISION
+======================================*/
+
+.vision{
+
+    background:#f8fafb;
+
+}
+
+.vision-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.vision-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:45px 35px;
+
+    text-align:center;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.vision-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.vision-card h3{
+
+    font-size:28px;
+
+    color:#12385b;
+
+    margin-bottom:20px;
+
+}
+
+.vision-card p{
+
+    color:#555;
+
+    line-height:1.9;
+
+}
+
+/*======================================
+ VALUE
+======================================*/
+
+.value{
+
+    background:#ffffff;
+
+}
+
+.value-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.value-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:45px 35px;
+
+    text-align:center;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.value-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.value-icon{
+
+    font-size:48px;
+
+    margin-bottom:25px;
+
+}
+
+.value-card h3{
+
+    font-size:24px;
+
+    color:#12385b;
+
+    margin-bottom:18px;
+
+}
+
+.value-card p{
+
+    color:#555;
+
+    line-height:1.9;
+
+}
+
+/*======================================
+ COMPANY RESPONSIVE
+======================================*/
+
+@media(max-width:900px){
+
+.message-grid{
+
+    grid-template-columns:1fr;
+
+    gap:40px;
+
+}
+
+.message-photo{
+
+    max-width:420px;
+
+    margin:0 auto;
+
+}
+
+.vision-grid,
+
+.value-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.profile-table th,
+
+.profile-table td{
+
+    display:block;
+
+    width:100%;
+
+}
+
+.profile-table th{
+
+    border-bottom:none;
+
+}
+
+.profile-table td{
+
+    padding-top:10px;
+
+}
+
+.mission-box{
+
+    padding:45px 30px;
+
+}
+
+}
