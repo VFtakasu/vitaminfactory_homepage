@@ -4135,3 +4135,14 @@ section h2{
     background:
     linear-gradient(rgba(8,40,55,.55), rgba(8,40,55,.55)),
     url("../images/oemhtml.jpg") center/cover no-repeat;
+/* OEMヒーロー高さ調整 */
+
+.oem-hero{
+
+    min-height:420px;
+
+    display:flex;
+
+    align-items:center;
+
+}
