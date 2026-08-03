@@ -4130,3 +4130,8 @@ section h2{
     url("../images/about.jpg") center/cover no-repeat;
 
 }
+.oem-hero{
+
+    background:
+    linear-gradient(rgba(8,40,55,.55), rgba(8,40,55,.55)),
+    url("../images/oemhtml.jpg") center/cover no-repeat;
