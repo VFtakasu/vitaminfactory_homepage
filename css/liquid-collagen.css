@@ -152,6 +152,10 @@ body{
 
 /* =========================================================
    Hero
+   Version 2 Hero Adjustment
+   ---------------------------------------------------------
+   ※ Hero部分のみ変更
+   ※ Hero以外のVersion 2 CSSは変更しない
 ========================================================= */
 
 .lc-hero{
@@ -163,6 +167,8 @@ body{
     display:flex;
 
     align-items:center;
+
+    justify-content:center;
 
     overflow:hidden;
 
@@ -185,9 +191,7 @@ body{
 
 
 /*
-    Heroは既存ページ同様、
-    コンテンツの背景ではなく
-    ページ全幅の背景として使用
+    Hero全体の装飾
 */
 
 .lc-hero::before{
@@ -210,6 +214,11 @@ body{
 
 }
 
+
+/*
+    Hero container
+*/
+
 .lc-hero .container{
 
     width:100%;
@@ -220,19 +229,47 @@ body{
 
 }
 
+
+/*
+    Hero grid
+    他ページと同様に中央配置
+*/
+
 .lc-hero-grid{
 
-    display:block;
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:100%;
 
 }
+
+
+/*
+    Hero text
+*/
 
 .lc-hero-text{
 
-    max-width:850px;
+    width:100%;
 
-    padding:145px 0 105px;
+    max-width:900px;
+
+    padding:120px 0 100px;
+
+    margin:0 auto;
+
+    text-align:center;
 
 }
+
+
+/*
+    Brand name
+*/
 
 .lc-brand{
 
@@ -254,15 +291,20 @@ body{
 
 }
 
+
+/*
+    Main title
+*/
+
 .lc-hero h1{
 
-    margin:0 0 18px;
+    margin:0 0 20px;
 
     color:#fff;
 
-    font-size:clamp(48px,6vw,78px);
+    font-size:clamp(52px,6vw,76px);
 
-    line-height:1.05;
+    line-height:1.1;
 
     font-weight:700;
 
@@ -270,19 +312,30 @@ body{
 
 }
 
+
+/*
+    Supporting Active Life & Wellness
+*/
+
 .lc-hero h2{
 
     margin:0 0 28px;
 
     color:#f2d9e1;
 
-    font-size:clamp(25px,3vw,39px);
+    font-size:clamp(28px,3vw,40px);
 
-    line-height:1.5;
+    line-height:1.45;
 
     font-weight:500;
 
 }
+
+
+/*
+    健康をつくることは、
+    未来をつくること。
+*/
 
 .lc-hero .lc-lead{
 
@@ -298,9 +351,16 @@ body{
 
 }
 
+
+/*
+    Hero description
+*/
+
 .lc-hero-text > p:not(.lc-brand):not(.lc-lead){
 
     max-width:720px;
+
+    margin:0 auto 35px;
 
     color:rgba(255,255,255,.90);
 
@@ -308,9 +368,12 @@ body{
 
     line-height:2;
 
-    margin:0 0 35px;
-
 }
+
+
+/*
+    Hero buttons
+*/
 
 .lc-buttons{
 
@@ -318,9 +381,16 @@ body{
 
     flex-wrap:wrap;
 
+    justify-content:center;
+
     gap:15px;
 
 }
+
+
+/*
+    Button common
+*/
 
 .lc-buttons a{
 
@@ -348,6 +418,11 @@ body{
 
 }
 
+
+/*
+    Main button
+*/
+
 .lc-buttons .btn-main{
 
     color:#fff;
@@ -364,6 +439,7 @@ body{
 
 }
 
+
 .lc-buttons .btn-main:hover{
 
     transform:translateY(-2px);
@@ -371,6 +447,11 @@ body{
     box-shadow:0 15px 35px rgba(0,0,0,.22);
 
 }
+
+
+/*
+    Sub button
+*/
 
 .lc-buttons .btn-sub{
 
@@ -384,6 +465,7 @@ body{
 
 }
 
+
 .lc-buttons .btn-sub:hover{
 
     background:rgba(255,255,255,.18);
@@ -391,15 +473,16 @@ body{
 }
 
 
-/* Hero image is hidden because raw_collagen is now full-width background */
+/*
+    Hero image
+    raw_collagen.jpgを背景画像として使用するため非表示
+*/
 
 .lc-hero-image{
 
     display:none;
 
 }
-
-
 /* =========================================================
    About
 ========================================================= */
