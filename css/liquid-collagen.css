@@ -1,7 +1,11 @@
 /* =========================================================
    Liquid Collagen Brand Page
    css/liquid-collagen.css
-   Version 2.2
+   Version 2.2 FINAL
+
+   Brand:
+   Liquid Collagen
+   Supporting Active Life & Wellness
 
    Concept:
    - Vitamin Factory corporate siteとの統一感
@@ -12,43 +16,46 @@
 
 
 /* =========================================================
-   Base
+   01. BRAND VARIABLES
 ========================================================= */
 
-.liquid-collagen-page{
+body{
 
     --lc-pink:#f8e9ed;
-
     --lc-pink-light:#fdf6f8;
 
     --lc-rose:#9b536b;
-
     --lc-rose-dark:#743b50;
 
     --lc-gold:#c9a66b;
-
     --lc-gold-light:#ead9b8;
 
     --lc-text:#49343b;
-
     --lc-text-light:#765f67;
 
     --lc-white:#ffffff;
 
     --lc-border:#ead8de;
 
-    --lc-shadow:0 15px 45px rgba(91,46,62,.10);
+    --lc-shadow:
+        0 15px 45px rgba(91,46,62,.10);
+
+}
+
+
+/* =========================================================
+   02. COMMON
+========================================================= */
+
+.liquid-collagen-page{
 
     color:var(--lc-text);
 
 }
 
 
-/* =========================================================
-   Container
-========================================================= */
-
-.lc-container{
+.liquid-collagen-page
+.container{
 
     width:90%;
 
@@ -60,10 +67,81 @@
 
 
 /* =========================================================
-   HERO
-   Version 2.2
+   03. COMMON SECTION TITLE
 ========================================================= */
 
+.liquid-collagen-page
+.section-title{
+
+    margin-bottom:60px;
+
+    text-align:center;
+
+}
+
+
+.liquid-collagen-page
+.section-sub{
+
+    margin:0 0 12px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    line-height:1.5;
+
+    letter-spacing:.24em;
+
+    color:var(--lc-rose);
+
+}
+
+
+.liquid-collagen-page
+.section-title h2{
+
+    margin:0;
+
+    font-size:42px;
+
+    font-weight:600;
+
+    line-height:1.4;
+
+    letter-spacing:.03em;
+
+    color:var(--lc-text);
+
+}
+
+
+.liquid-collagen-page
+.lc-section-lead{
+
+    max-width:720px;
+
+    margin:20px auto 0;
+
+    font-size:16px;
+
+    line-height:2;
+
+    color:var(--lc-text-light);
+
+}
+
+
+/* =========================================================
+   04. HERO
+   Existing corporate Hero:
+   min-height:65vh
+   title 58px
+
+   ※Hero以外の既存構造を崩さない
+========================================================= */
+
+.liquid-collagen-page
 .lc-hero{
 
     position:relative;
@@ -78,32 +156,9 @@
 
     justify-content:center;
 
-    text-align:center;
-
     overflow:hidden;
 
-    color:#fff;
-
-    background-image:url("../images/raw_collagen.jpg");
-
-    background-size:cover;
-
-    background-position:center center;
-
-}
-
-
-/* -----------------------------------------
-   Hero Overlay
------------------------------------------ */
-
-.lc-hero-overlay{
-
-    position:absolute;
-
-    inset:0;
-
-    z-index:1;
+    color:#ffffff;
 
     background:
         linear-gradient(
@@ -111,41 +166,49 @@
             rgba(92,36,57,.52),
             rgba(139,67,91,.34),
             rgba(196,145,65,.22)
-        );
+        ),
+        url("../images/raw_collagen.jpg")
+        center center / cover no-repeat;
 
 }
 
 
-/* -----------------------------------------
-   Hero Content
------------------------------------------ */
+/* Hero grid */
 
-.lc-hero-content{
+.liquid-collagen-page
+.lc-hero-grid{
 
     position:relative;
 
     z-index:2;
 
-    width:90%;
+    display:grid;
 
-    max-width:900px;
+    grid-template-columns:1fr 1fr;
 
-    margin:0 auto;
+    gap:60px;
 
-    padding:40px 20px;
+    align-items:center;
+
+    padding:70px 0;
+
+}
+
+
+/* Hero text */
+
+.liquid-collagen-page
+.lc-hero-text{
 
     text-align:center;
 
 }
 
 
-/* -----------------------------------------
-   Hero Eyebrow
------------------------------------------ */
+.liquid-collagen-page
+.lc-brand{
 
-.lc-hero-eyebrow{
-
-    margin:0 0 24px;
+    margin:0 0 20px;
 
     font-size:16px;
 
@@ -153,21 +216,20 @@
 
     line-height:1.5;
 
-    letter-spacing:.25em;
+    letter-spacing:.20em;
 
-    color:#f8dfc0;
+    color:#f5dcae;
+
+    text-shadow:
+        0 2px 12px rgba(50,20,30,.30);
 
 }
 
 
-/* -----------------------------------------
-   Hero Main Title
-   既存サイト .page-content h1 = 58px
------------------------------------------ */
+.liquid-collagen-page
+.lc-hero-text h1{
 
-.lc-hero-content h1{
-
-    margin:0;
+    margin:0 0 22px;
 
     font-size:58px;
 
@@ -177,7 +239,7 @@
 
     letter-spacing:.04em;
 
-    color:#fff;
+    color:#ffffff;
 
     text-shadow:
         0 2px 14px rgba(50,20,30,.30);
@@ -185,125 +247,252 @@
 }
 
 
-/* -----------------------------------------
-   Hero Copy
------------------------------------------ */
+.liquid-collagen-page
+.lc-hero-text h2{
 
-.lc-hero-copy{
+    margin:0 0 24px;
 
-    margin:28px 0 0;
+    font-size:30px;
 
-    font-size:24px;
+    font-weight:600;
+
+    line-height:1.6;
+
+    color:#ffffff;
+
+    text-shadow:
+        0 2px 12px rgba(50,20,30,.28);
+
+}
+
+
+.liquid-collagen-page
+.lc-hero-text p{
+
+    color:#fff8f8;
+
+}
+
+
+.liquid-collagen-page
+.lc-hero-text
+.lc-lead{
+
+    margin:0 0 18px;
+
+    font-size:18px;
 
     font-weight:500;
 
-    line-height:1.7;
-
-    letter-spacing:.08em;
-
-    color:#fff;
-
-    text-shadow:
-        0 2px 10px rgba(50,20,30,.25);
+    line-height:2;
 
 }
 
 
-/* -----------------------------------------
-   Hero Description
------------------------------------------ */
+.liquid-collagen-page
+.lc-hero-text
+.lc-lead + p{
 
-.lc-hero-description{
+    margin-bottom:28px;
 
-    margin:16px 0 0;
+    font-size:15px;
 
-    font-size:16px;
-
-    font-weight:400;
-
-    line-height:1.8;
-
-    letter-spacing:.05em;
-
-    color:#fff8f7;
+    line-height:1.9;
 
 }
 
 
-/* =========================================================
-   ABOUT
-========================================================= */
+/* Hero image */
 
-.collagen-about{
+.liquid-collagen-page
+.lc-hero-image{
 
-    padding:110px 0;
+    position:relative;
 
-    background:#fff;
+    overflow:hidden;
 
-}
+    min-height:400px;
 
+    display:flex;
 
-.collagen-about .container{
+    align-items:center;
 
-    width:90%;
-
-    max-width:1200px;
-
-    margin:0 auto;
+    justify-content:center;
 
 }
 
 
-/* -----------------------------------------
-   Section Title
------------------------------------------ */
+.liquid-collagen-page
+.lc-hero-image > img{
 
-.collagen-about .section-title{
+    width:100%;
 
-    margin-bottom:65px;
+    height:400px;
 
-    text-align:center;
+    display:block;
+
+    object-fit:cover;
+
+    border-radius:4px;
+
+    box-shadow:
+        0 20px 55px rgba(50,20,30,.20);
 
 }
 
 
-.collagen-about .section-sub{
+/* Glass image */
 
-    margin:0 0 12px;
+.liquid-collagen-page
+.glass-image{
+
+    position:absolute;
+
+    right:20px;
+
+    bottom:20px;
+
+    width:145px;
+
+    height:145px;
+
+    padding:8px;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.72);
+
+    border:1px solid rgba(255,255,255,.65);
+
+    box-shadow:
+        0 12px 35px rgba(50,20,30,.18);
+
+    backdrop-filter:blur(8px);
+
+}
+
+
+.liquid-collagen-page
+.glass-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+
+/* Hero buttons */
+
+.liquid-collagen-page
+.lc-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+
+.liquid-collagen-page
+.lc-buttons a{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:190px;
+
+    padding:14px 25px;
+
+    border-radius:2px;
+
+    text-decoration:none;
 
     font-size:14px;
 
     font-weight:600;
 
-    letter-spacing:.25em;
+    letter-spacing:.08em;
 
-    color:var(--lc-rose);
-
-}
-
-
-.collagen-about .section-title h2{
-
-    margin:0;
-
-    font-size:42px;
-
-    font-weight:600;
-
-    line-height:1.35;
-
-    letter-spacing:.04em;
-
-    color:var(--lc-text);
+    transition:
+        .3s ease;
 
 }
 
 
-/* -----------------------------------------
-   About Grid
------------------------------------------ */
+.liquid-collagen-page
+.btn-main{
 
-.about-grid{
+    background:var(--lc-gold);
+
+    border:1px solid var(--lc-gold);
+
+    color:#ffffff;
+
+}
+
+
+.liquid-collagen-page
+.btn-main:hover{
+
+    background:#b88e4e;
+
+    border-color:#b88e4e;
+
+}
+
+
+.liquid-collagen-page
+.btn-sub{
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.85);
+
+    color:#ffffff;
+
+}
+
+
+.liquid-collagen-page
+.btn-sub:hover{
+
+    background:#ffffff;
+
+    color:var(--lc-rose-dark);
+
+}
+
+
+/* =========================================================
+   05. ABOUT
+========================================================= */
+
+.liquid-collagen-page
+.lc-about{
+
+    padding:110px 0;
+
+    background:#ffffff;
+
+}
+
+
+.liquid-collagen-page
+.lc-about-grid{
 
     display:grid;
 
@@ -316,24 +505,20 @@
 }
 
 
-/* -----------------------------------------
-   About Image
------------------------------------------ */
-
-.about-image{
+.liquid-collagen-page
+.lc-about-image{
 
     overflow:hidden;
 
-    border-radius:4px;
-
-    background:#f8eef1;
+    background:var(--lc-pink-light);
 
     box-shadow:var(--lc-shadow);
 
 }
 
 
-.about-image img{
+.liquid-collagen-page
+.lc-about-image img{
 
     width:100%;
 
@@ -344,11 +529,8 @@
 }
 
 
-/* -----------------------------------------
-   About Content
------------------------------------------ */
-
-.about-content h3{
+.liquid-collagen-page
+.lc-about-text h3{
 
     margin:0 0 28px;
 
@@ -363,7 +545,8 @@
 }
 
 
-.about-content p{
+.liquid-collagen-page
+.lc-about-text p{
 
     margin:0 0 20px;
 
@@ -377,10 +560,11 @@
 
 
 /* =========================================================
-   QUALITY
+   06. ORIGIN / RAW MATERIAL
 ========================================================= */
 
-.collagen-quality{
+.liquid-collagen-page
+.lc-origin{
 
     padding:110px 0;
 
@@ -394,61 +578,142 @@
 }
 
 
-.collagen-quality .container{
+.liquid-collagen-page
+.lc-origin-grid{
 
-    width:90%;
+    display:grid;
 
-    max-width:1200px;
+    grid-template-columns:1fr 1fr;
 
-    margin:0 auto;
+    gap:70px;
 
-}
-
-
-.collagen-quality .section-title{
-
-    margin-bottom:60px;
-
-    text-align:center;
+    align-items:center;
 
 }
 
 
-.collagen-quality .section-sub{
+.liquid-collagen-page
+.lc-origin-content h2{
 
-    margin:0 0 12px;
+    margin:0 0 25px;
 
-    font-size:14px;
+    font-size:38px;
 
     font-weight:600;
 
-    letter-spacing:.25em;
+    line-height:1.5;
 
-    color:var(--lc-rose);
+    color:var(--lc-rose-dark);
 
 }
 
 
-.collagen-quality .section-title h2{
+.liquid-collagen-page
+.lc-origin-content p{
 
-    margin:0;
+    margin:0 0 20px;
 
-    font-size:42px;
+    font-size:16px;
+
+    line-height:2;
+
+    color:var(--lc-text-light);
+
+}
+
+
+.liquid-collagen-page
+.lc-origin-image{
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:var(--lc-shadow);
+
+}
+
+
+.liquid-collagen-page
+.lc-origin-image > img{
+
+    width:100%;
+
+    height:auto;
+
+    display:block;
+
+}
+
+
+.liquid-collagen-page
+.lc-origin-caption{
+
+    position:absolute;
+
+    left:0;
+
+    right:0;
+
+    bottom:0;
+
+    padding:22px 25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:5px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(50,25,35,.72)
+        );
+
+    color:#ffffff;
+
+}
+
+
+.liquid-collagen-page
+.lc-origin-caption span{
+
+    font-size:11px;
+
+    letter-spacing:.18em;
+
+    color:#f1d49d;
+
+}
+
+
+.liquid-collagen-page
+.lc-origin-caption strong{
+
+    font-size:20px;
 
     font-weight:600;
 
-    line-height:1.35;
+}
 
-    color:var(--lc-text);
+
+/* =========================================================
+   07. FEATURES
+========================================================= */
+
+.liquid-collagen-page
+.lc-features{
+
+    padding:110px 0;
+
+    background:#ffffff;
 
 }
 
 
-/* -----------------------------------------
-   Quality Grid
------------------------------------------ */
-
-.quality-grid{
+.liquid-collagen-page
+.lc-feature-grid{
 
     display:grid;
 
@@ -459,7 +724,10 @@
 }
 
 
-.quality-card{
+.liquid-collagen-page
+.lc-feature-item{
+
+    position:relative;
 
     padding:40px;
 
@@ -477,7 +745,8 @@
 }
 
 
-.quality-card:hover{
+.liquid-collagen-page
+.lc-feature-item:hover{
 
     transform:translateY(-5px);
 
@@ -487,22 +756,42 @@
 }
 
 
-.quality-card h3{
+.liquid-collagen-page
+.lc-feature-index{
+
+    display:block;
+
+    margin-bottom:18px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:.15em;
+
+    color:var(--lc-gold);
+
+}
+
+
+.liquid-collagen-page
+.lc-feature-item h3{
 
     margin:0 0 18px;
 
-    font-size:18px;
+    font-size:24px;
 
     font-weight:600;
 
-    letter-spacing:.08em;
+    line-height:1.5;
 
     color:var(--lc-rose-dark);
 
 }
 
 
-.quality-card p{
+.liquid-collagen-page
+.lc-feature-item p{
 
     margin:0;
 
@@ -516,406 +805,87 @@
 
 
 /* =========================================================
-   ACTIVE LIFE
+   08. SUPPORTING ACTIVE LIFE & WELLNESS
 ========================================================= */
 
-.collagen-active{
+.liquid-collagen-page
+.lc-support{
 
     padding:110px 0;
-
-    background:#fff;
-
-}
-
-
-.collagen-active .container{
-
-    width:90%;
-
-    max-width:1200px;
-
-    margin:0 auto;
-
-}
-
-
-.active-grid{
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:70px;
-
-    align-items:center;
-
-}
-
-
-.active-image{
-
-    overflow:hidden;
-
-    border-radius:4px;
-
-    box-shadow:var(--lc-shadow);
-
-}
-
-
-.active-image img{
-
-    width:100%;
-
-    height:auto;
-
-    display:block;
-
-}
-
-
-.active-content h2{
-
-    margin:0 0 28px;
-
-    font-size:38px;
-
-    font-weight:600;
-
-    line-height:1.45;
-
-    color:var(--lc-rose-dark);
-
-}
-
-
-.active-content p{
-
-    margin:0 0 20px;
-
-    font-size:16px;
-
-    line-height:2;
-
-    color:var(--lc-text-light);
-
-}
-
-
-/* =========================================================
-   DRINK SCENE
-========================================================= */
-
-.collagen-drink{
-
-    padding:0;
-
-    position:relative;
-
-    overflow:hidden;
-
-}
-
-
-.collagen-drink img{
-
-    width:100%;
-
-    height:500px;
-
-    object-fit:cover;
-
-    display:block;
-
-}
-
-
-.collagen-drink-overlay{
-
-    position:absolute;
-
-    inset:0;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    text-align:center;
-
-    padding:30px;
-
-    background:
-        linear-gradient(
-            rgba(91,40,57,.18),
-            rgba(91,40,57,.42)
-        );
-
-}
-
-
-.collagen-drink-overlay h2{
-
-    margin:0;
-
-    max-width:850px;
-
-    font-size:42px;
-
-    font-weight:600;
-
-    line-height:1.5;
-
-    color:#fff;
-
-    text-shadow:
-        0 3px 15px rgba(50,20,30,.30);
-
-}
-
-
-/* =========================================================
-   RAW MATERIAL
-========================================================= */
-
-.collagen-raw{
-
-    padding:110px 0;
-
-    background:#fff;
-
-}
-
-
-.collagen-raw .container{
-
-    width:90%;
-
-    max-width:1200px;
-
-    margin:0 auto;
-
-}
-
-
-.raw-grid{
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:70px;
-
-    align-items:center;
-
-}
-
-
-.raw-image{
-
-    overflow:hidden;
-
-    border-radius:4px;
-
-    background:#f8eef1;
-
-    box-shadow:var(--lc-shadow);
-
-}
-
-
-.raw-image img{
-
-    width:100%;
-
-    height:auto;
-
-    display:block;
-
-}
-
-
-.raw-content h2{
-
-    margin:0 0 25px;
-
-    font-size:36px;
-
-    font-weight:600;
-
-    line-height:1.5;
-
-    color:var(--lc-rose-dark);
-
-}
-
-
-.raw-content p{
-
-    margin:0 0 20px;
-
-    font-size:16px;
-
-    line-height:2;
-
-    color:var(--lc-text-light);
-
-}
-
-
-/* =========================================================
-   PRODUCT / OEM FORM
-========================================================= */
-
-.collagen-product-form{
-
-    padding:110px 0;
-
-    background:
-        linear-gradient(
-            180deg,
-            #fdf4f7 0%,
-            #fff 100%
-        );
-
-}
-
-
-.collagen-product-form .container{
-
-    width:90%;
-
-    max-width:1200px;
-
-    margin:0 auto;
-
-}
-
-
-.collagen-product-form .section-title{
-
-    margin-bottom:60px;
-
-    text-align:center;
-
-}
-
-
-.collagen-product-form .section-sub{
-
-    margin:0 0 12px;
-
-    font-size:14px;
-
-    font-weight:600;
-
-    letter-spacing:.25em;
-
-    color:var(--lc-rose);
-
-}
-
-
-.collagen-product-form .section-title h2{
-
-    margin:0;
-
-    font-size:42px;
-
-    font-weight:600;
-
-    line-height:1.35;
-
-    color:var(--lc-text);
-
-}
-
-
-.product-form-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:30px;
-
-}
-
-
-.product-form-card{
-
-    overflow:hidden;
-
-    background:#fff;
-
-    border:1px solid var(--lc-border);
-
-    box-shadow:
-        0 10px 35px rgba(92,36,57,.07);
-
-}
-
-
-.lc-product-form-image{
-
-    height:280px;
-
-    padding:20px;
-
-    overflow:hidden;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
 
     background:
         linear-gradient(
             135deg,
-            #fff,
-            #fdf5f7
+            #fdf4f7,
+            #f8e9ed
         );
 
 }
 
 
-.lc-product-form-image img{
+.liquid-collagen-page
+.lc-support-grid{
 
-    width:100%;
+    display:grid;
 
-    height:100%;
+    grid-template-columns:repeat(4,1fr);
 
-    object-fit:contain;
-
-    display:block;
-
-    transition:.5s ease;
+    gap:22px;
 
 }
 
 
-.product-form-card:hover
-.lc-product-form-image img{
+.liquid-collagen-page
+.lc-support-card{
 
-    transform:scale(1.03);
+    padding:38px 28px;
+
+    background:rgba(255,255,255,.86);
+
+    border:1px solid var(--lc-border);
+
+    text-align:center;
+
+    box-shadow:
+        0 10px 30px rgba(92,36,57,.06);
 
 }
 
 
-.product-form-content{
+.liquid-collagen-page
+.lc-support-number{
 
-    padding:28px 30px 32px;
+    width:48px;
+
+    height:48px;
+
+    margin:0 auto 22px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--lc-gold);
+
+    color:#ffffff;
+
+    font-size:13px;
+
+    font-weight:700;
 
 }
 
 
-.product-form-content h3{
+.liquid-collagen-page
+.lc-support-card h3{
 
-    margin:0 0 12px;
+    margin:0 0 15px;
 
-    font-size:20px;
+    font-size:22px;
 
     font-weight:600;
 
@@ -924,7 +894,8 @@
 }
 
 
-.product-form-content p{
+.liquid-collagen-page
+.lc-support-card p{
 
     margin:0;
 
@@ -938,67 +909,78 @@
 
 
 /* =========================================================
-   OEM SUPPLY
+   09. DAILY LIFE / DRINK
 ========================================================= */
 
-.collagen-oem{
+.liquid-collagen-page
+.lc-daily{
 
-    padding:110px 0;
+    padding:0;
 
-    background:#fff;
-
-}
-
-
-.collagen-oem .container{
-
-    width:90%;
-
-    max-width:1200px;
-
-    margin:0 auto;
+    background:#ffffff;
 
 }
 
 
-.oem-grid{
+.liquid-collagen-page
+.lc-daily-grid{
 
     display:grid;
 
     grid-template-columns:1fr 1fr;
 
-    gap:70px;
-
-    align-items:center;
+    min-height:500px;
 
 }
 
 
-.oem-image{
+.liquid-collagen-page
+.lc-daily-image{
 
     overflow:hidden;
 
-    border-radius:4px;
-
-    background:#f7eff2;
-
-    box-shadow:var(--lc-shadow);
-
 }
 
 
-.oem-image img{
+.liquid-collagen-page
+.lc-daily-image img{
 
     width:100%;
 
-    height:auto;
+    height:100%;
+
+    min-height:500px;
 
     display:block;
+
+    object-fit:cover;
 
 }
 
 
-.oem-content h2{
+.liquid-collagen-page
+.lc-daily-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    padding:70px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8fa,
+            #f9e9ee
+        );
+
+}
+
+
+.liquid-collagen-page
+.lc-daily-content h2{
 
     margin:0 0 25px;
 
@@ -1013,7 +995,8 @@
 }
 
 
-.oem-content p{
+.liquid-collagen-page
+.lc-daily-content p{
 
     margin:0 0 20px;
 
@@ -1027,94 +1010,122 @@
 
 
 /* =========================================================
-   EVIDENCE / DATA
+   10. QUALITY
 ========================================================= */
 
-.collagen-evidence{
+.liquid-collagen-page
+.lc-quality{
 
     padding:110px 0;
+
+    background:#ffffff;
+
+}
+
+
+.liquid-collagen-page
+.lc-quality-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+
+.liquid-collagen-page
+.lc-quality-card{
+
+    position:relative;
+
+    padding:42px;
 
     background:
         linear-gradient(
             135deg,
-            #fdf3f6,
-            #f8e9ed
+            #ffffff,
+            #fdf6f8
         );
 
-}
+    border:1px solid var(--lc-border);
 
+    box-shadow:
+        0 10px 35px rgba(92,36,57,.06);
 
-.collagen-evidence .container{
-
-    width:90%;
-
-    max-width:1100px;
-
-    margin:0 auto;
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
 
 }
 
 
-.collagen-evidence .section-title{
+.liquid-collagen-page
+.lc-quality-card:hover{
 
-    margin-bottom:55px;
+    transform:translateY(-5px);
 
-    text-align:center;
+    box-shadow:
+        0 18px 45px rgba(92,36,57,.12);
 
 }
 
 
-.collagen-evidence .section-sub{
+.liquid-collagen-page
+.lc-quality-number{
+
+    display:block;
+
+    margin-bottom:15px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:.15em;
+
+    color:var(--lc-gold);
+
+}
+
+
+.liquid-collagen-page
+.lc-quality-label{
 
     margin:0 0 12px;
 
-    font-size:14px;
+    font-size:12px;
 
-    font-weight:600;
+    font-weight:700;
 
-    letter-spacing:.25em;
+    letter-spacing:.18em;
 
     color:var(--lc-rose);
 
 }
 
 
-.collagen-evidence .section-title h2{
+.liquid-collagen-page
+.lc-quality-card h3{
 
-    margin:0;
+    margin:0 0 18px;
 
-    font-size:42px;
+    font-size:23px;
 
     font-weight:600;
 
-    line-height:1.35;
+    line-height:1.5;
 
-    color:var(--lc-text);
-
-}
-
-
-.evidence-content{
-
-    max-width:900px;
-
-    margin:0 auto;
-
-    padding:45px;
-
-    background:#fff;
-
-    border:1px solid var(--lc-border);
-
-    box-shadow:
-        0 15px 45px rgba(92,36,57,.08);
+    color:var(--lc-rose-dark);
 
 }
 
 
-.evidence-content p{
+.liquid-collagen-page
+.lc-quality-card p{
 
-    margin:0 0 20px;
+    margin:0;
 
     font-size:15px;
 
@@ -1125,49 +1136,52 @@
 }
 
 
-.evidence-content p:last-child{
-
-    margin-bottom:0;
-
-}
-
-
 /* =========================================================
-   CTA
+   11. QUALITY STATEMENT
 ========================================================= */
 
-.collagen-cta{
+.liquid-collagen-page
+.lc-quality-statement{
 
-    padding:100px 0;
-
-    text-align:center;
+    padding:110px 0;
 
     background:
         linear-gradient(
             135deg,
-            #7d4055,
-            #a65b74
+            #7c4358,
+            #a55c75
         );
 
-    color:#fff;
+    color:#ffffff;
 
 }
 
 
-.collagen-cta .container{
+.liquid-collagen-page
+.lc-quality-statement-inner{
 
-    width:90%;
-
-    max-width:1000px;
+    max-width:850px;
 
     margin:0 auto;
 
+    text-align:center;
+
 }
 
 
-.collagen-cta h2{
+.liquid-collagen-page
+.lc-quality-statement
+.section-sub{
 
-    margin:0 0 22px;
+    color:#ead19c;
+
+}
+
+
+.liquid-collagen-page
+.lc-quality-statement h2{
+
+    margin:0 0 30px;
 
     font-size:40px;
 
@@ -1175,18 +1189,15 @@
 
     line-height:1.5;
 
-    letter-spacing:.04em;
-
-    color:#fff;
+    color:#ffffff;
 
 }
 
 
-.collagen-cta p{
+.liquid-collagen-page
+.lc-quality-statement p{
 
-    margin:0 auto 35px;
-
-    max-width:750px;
+    margin:0 0 24px;
 
     font-size:16px;
 
@@ -1197,26 +1208,423 @@
 }
 
 
-/* =========================================================
-   Buttons
-========================================================= */
+.liquid-collagen-page
+.lc-quality-statement p:last-child{
 
-.lc-buttons{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:18px;
-
-    flex-wrap:wrap;
+    margin-bottom:0;
 
 }
 
 
-.lc-btn{
+/* =========================================================
+   12. EVIDENCE
+========================================================= */
+
+.liquid-collagen-page
+.lc-evidence{
+
+    padding:110px 0;
+
+    background:#fdf4f7;
+
+}
+
+
+.liquid-collagen-page
+.lc-evidence-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+
+.liquid-collagen-page
+.lc-evidence-card{
+
+    padding:38px;
+
+    background:#ffffff;
+
+    border:1px solid var(--lc-border);
+
+    box-shadow:
+        0 10px 35px rgba(92,36,57,.06);
+
+}
+
+
+.liquid-collagen-page
+.lc-evidence-icon{
+
+    width:48px;
+
+    height:48px;
+
+    margin-bottom:20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--lc-gold);
+
+    color:#ffffff;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+
+.liquid-collagen-page
+.lc-evidence-label{
+
+    margin:0 0 12px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:.18em;
+
+    color:var(--lc-rose);
+
+}
+
+
+.liquid-collagen-page
+.lc-evidence-card h3{
+
+    margin:0 0 20px;
+
+    font-size:24px;
+
+    font-weight:600;
+
+    color:var(--lc-rose-dark);
+
+}
+
+
+.liquid-collagen-page
+.lc-evidence-card p{
+
+    margin:0 0 18px;
+
+    font-size:15px;
+
+    line-height:2;
+
+    color:var(--lc-text-light);
+
+}
+
+
+.liquid-collagen-page
+.lc-evidence-card p:last-child{
+
+    margin-bottom:0;
+
+}
+
+
+.liquid-collagen-page
+.lc-note{
+
+    padding-top:15px;
+
+    border-top:1px solid var(--lc-border);
+
+    font-size:13px !important;
+
+    color:#8b747d !important;
+
+}
+
+
+/* =========================================================
+   13. CUSTOMER VOICE
+========================================================= */
+
+.liquid-collagen-page
+.lc-voice{
+
+    padding:110px 0;
+
+    background:#ffffff;
+
+}
+
+
+.liquid-collagen-page
+.lc-voice-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+
+.liquid-collagen-page
+.lc-voice-card{
+
+    margin:0;
+
+    padding:40px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8fa,
+            #fdf1f5
+        );
+
+    border-left:4px solid var(--lc-gold);
+
+}
+
+
+.liquid-collagen-page
+.lc-voice-card p{
+
+    margin:0 0 22px;
+
+    font-size:17px;
+
+    line-height:2;
+
+    color:var(--lc-text);
+
+}
+
+
+.liquid-collagen-page
+.lc-voice-card cite{
+
+    font-size:12px;
+
+    font-style:normal;
+
+    color:var(--lc-rose);
+
+}
+
+
+/* =========================================================
+   14. OEM / ODM
+========================================================= */
+
+.liquid-collagen-page
+.lc-oem{
+
+    padding:110px 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #fdf5f7
+        );
+
+}
+
+
+.liquid-collagen-page
+.lc-oem-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+
+.liquid-collagen-page
+.lc-oem-content h2{
+
+    margin:0 0 25px;
+
+    font-size:38px;
+
+    font-weight:600;
+
+    line-height:1.5;
+
+    color:var(--lc-rose-dark);
+
+}
+
+
+.liquid-collagen-page
+.lc-oem-content p{
+
+    margin:0 0 20px;
+
+    font-size:16px;
+
+    line-height:2;
+
+    color:var(--lc-text-light);
+
+}
+
+
+.liquid-collagen-page
+.lc-oem-image{
+
+    overflow:hidden;
+
+    background:#ffffff;
+
+    box-shadow:var(--lc-shadow);
+
+}
+
+
+.liquid-collagen-page
+.lc-oem-image img{
+
+    width:100%;
+
+    height:auto;
+
+    max-height:500px;
+
+    display:block;
+
+    object-fit:contain;
+
+}
+
+
+/* OEM points */
+
+.liquid-collagen-page
+.lc-oem-points{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+    margin:30px 0;
+
+}
+
+
+.liquid-collagen-page
+.lc-oem-point{
+
+    padding:18px;
+
+    background:#ffffff;
+
+    border:1px solid var(--lc-border);
+
+}
+
+
+.liquid-collagen-page
+.lc-oem-point span{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    color:var(--lc-gold);
+
+}
+
+
+.liquid-collagen-page
+.lc-oem-point p{
+
+    margin:0;
+
+    font-size:14px;
+
+    line-height:1.6;
+
+    color:var(--lc-text);
+
+}
+
+
+/* =========================================================
+   15. TEXT LINK
+========================================================= */
+
+.liquid-collagen-page
+.lc-text-link{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-top:8px;
+
+    color:var(--lc-rose-dark);
+
+    font-size:14px;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    border-bottom:1px solid var(--lc-gold-light);
+
+    padding-bottom:5px;
+
+    transition:.3s ease;
+
+}
+
+
+.liquid-collagen-page
+.lc-text-link:hover{
+
+    color:var(--lc-gold);
+
+}
+
+
+.liquid-collagen-page
+.lc-text-link span{
+
+    color:var(--lc-gold);
+
+}
+
+
+/* =========================================================
+   16. BUTTONS
+========================================================= */
+
+.liquid-collagen-page
+.lc-gold-button{
 
     display:inline-flex;
 
@@ -1224,72 +1632,77 @@
 
     justify-content:center;
 
-    min-width:210px;
+    gap:12px;
+
+    min-width:220px;
 
     padding:15px 28px;
-
-    border-radius:2px;
-
-    font-size:14px;
-
-    font-weight:600;
-
-    letter-spacing:.08em;
-
-    text-decoration:none;
-
-    transition:
-        background .3s ease,
-        color .3s ease,
-        border-color .3s ease,
-        transform .3s ease;
-
-}
-
-
-.lc-btn:hover{
-
-    transform:translateY(-2px);
-
-}
-
-
-.lc-btn-gold{
 
     background:var(--lc-gold);
 
     border:1px solid var(--lc-gold);
 
-    color:#fff;
+    color:#ffffff;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    letter-spacing:.06em;
+
+    transition:.3s ease;
 
 }
 
 
-.lc-btn-gold:hover{
+.liquid-collagen-page
+.lc-gold-button:hover{
 
-    background:#b89252;
+    background:#b88e4e;
 
-    border-color:#b89252;
+    border-color:#b88e4e;
 
 }
 
 
-.lc-btn-outline{
+.liquid-collagen-page
+.lc-outline-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:200px;
+
+    padding:15px 28px;
 
     background:transparent;
 
-    border:1px solid rgba(255,255,255,.8);
+    border:1px solid rgba(255,255,255,.75);
 
-    color:#fff;
+    color:#ffffff;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    letter-spacing:.06em;
+
+    transition:.3s ease;
 
 }
 
 
-.lc-btn-outline:hover{
+.liquid-collagen-page
+.lc-outline-button:hover{
 
-    background:#fff;
-
-    border-color:#fff;
+    background:#ffffff;
 
     color:var(--lc-rose-dark);
 
@@ -1297,124 +1710,377 @@
 
 
 /* =========================================================
-   Mobile
+   17. BRAND MESSAGE
 ========================================================= */
 
-@media (max-width:768px){
+.liquid-collagen-page
+.lc-brand-message{
 
-    /* -----------------------------------------
-       Hero
-    ----------------------------------------- */
+    padding:120px 0;
 
-    .lc-hero{
+    background:
+        linear-gradient(
+            135deg,
+            #f9e8ed,
+            #fdf7f8
+        );
 
-        min-height:65vh;
+    text-align:center;
 
-        background-position:center center;
-
-    }
-
-
-    .lc-hero-content{
-
-        width:92%;
-
-        padding:35px 15px;
-
-    }
+}
 
 
-    .lc-hero-eyebrow{
+.liquid-collagen-page
+.lc-brand-message-inner{
 
-        margin-bottom:18px;
+    max-width:900px;
 
-        font-size:13px;
+    margin:0 auto;
 
-        letter-spacing:.18em;
-
-    }
-
-
-    .lc-hero-content h1{
-
-        font-size:32px;
-
-        line-height:1.35;
-
-        letter-spacing:.02em;
-
-    }
+}
 
 
-    .lc-hero-copy{
+.liquid-collagen-page
+.lc-brand-message-label{
 
-        margin-top:20px;
+    margin:0 0 18px;
 
-        font-size:20px;
+    font-size:13px;
 
-        line-height:1.6;
+    font-weight:700;
 
-        letter-spacing:.04em;
+    letter-spacing:.25em;
 
-    }
+    color:var(--lc-rose);
 
-
-    .lc-hero-description{
-
-        margin-top:12px;
-
-        font-size:13px;
-
-        line-height:1.8;
-
-    }
+}
 
 
-    /* -----------------------------------------
-       Common Sections
-    ----------------------------------------- */
+.liquid-collagen-page
+.lc-brand-message h2{
 
-    .collagen-about,
-    .collagen-quality,
-    .collagen-active,
-    .collagen-raw,
-    .collagen-product-form,
-    .collagen-oem,
-    .collagen-evidence{
+    margin:0 0 28px;
 
-        padding:80px 0;
+    font-size:48px;
 
-    }
+    font-weight:600;
 
+    line-height:1.35;
 
-    .collagen-about .section-title,
-    .collagen-quality .section-title,
-    .collagen-product-form .section-title,
-    .collagen-evidence .section-title{
+    color:var(--lc-rose-dark);
 
-        margin-bottom:45px;
-
-    }
+}
 
 
-    .collagen-about .section-title h2,
-    .collagen-quality .section-title h2,
-    .collagen-product-form .section-title h2,
-    .collagen-evidence .section-title h2{
+.liquid-collagen-page
+.lc-brand-message-inner > p:not(.lc-brand-message-label):not(.lc-brand-message-small){
 
-        font-size:32px;
+    margin:0 0 24px;
 
-    }
+    font-size:28px;
+
+    line-height:1.6;
+
+    color:var(--lc-text);
+
+}
 
 
-    /* -----------------------------------------
-       Grids
-    ----------------------------------------- */
+.liquid-collagen-page
+.lc-brand-message-small{
 
-    .about-grid,
-    .active-grid,
-    .raw-grid,
-    .oem-grid{
+    max-width:720px;
+
+    margin:0 auto;
+
+    font-size:15px;
+
+    line-height:2;
+
+    color:var(--lc-text-light);
+
+}
+
+
+/* =========================================================
+   18. CONTACT
+========================================================= */
+
+.liquid-collagen-page
+.lc-contact{
+
+    padding:110px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #743b50,
+            #a45a73
+        );
+
+    color:#ffffff;
+
+}
+
+
+.liquid-collagen-page
+.lc-contact-inner{
+
+    max-width:850px;
+
+    margin:0 auto;
+
+    text-align:center;
+
+}
+
+
+.liquid-collagen-page
+.lc-contact-inner
+.section-sub{
+
+    color:#ead19c;
+
+}
+
+
+.liquid-collagen-page
+.lc-contact-inner h2{
+
+    margin:0 0 25px;
+
+    font-size:40px;
+
+    font-weight:600;
+
+    line-height:1.5;
+
+    color:#ffffff;
+
+}
+
+
+.liquid-collagen-page
+.lc-contact-inner > p:not(.section-sub){
+
+    margin:0 auto 30px;
+
+    max-width:700px;
+
+    font-size:16px;
+
+    line-height:2;
+
+    color:#fff4f6;
+
+}
+
+
+.liquid-collagen-page
+.lc-contact-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+
+/* =========================================================
+   19. FOOTER
+========================================================= */
+
+.liquid-collagen-page
+.lc-footer{
+
+    padding:65px 0 35px;
+
+    background:#4c2937;
+
+    color:#ffffff;
+
+}
+
+
+.liquid-collagen-page
+.lc-footer-grid{
+
+    display:grid;
+
+    grid-template-columns:1.2fr 1fr;
+
+    gap:70px;
+
+}
+
+
+.liquid-collagen-page
+.lc-footer-brand{
+
+    text-align:left;
+
+}
+
+
+.liquid-collagen-page
+.lc-footer-logo{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:18px;
+
+    color:#ffffff;
+
+    text-decoration:none;
+
+}
+
+
+.liquid-collagen-page
+.lc-footer-logo img{
+
+    width:42px;
+
+    height:auto;
+
+    display:block;
+
+}
+
+
+.liquid-collagen-page
+.lc-footer-logo span{
+
+    font-size:18px;
+
+    font-weight:600;
+
+    letter-spacing:.04em;
+
+}
+
+
+.liquid-collagen-page
+.lc-footer-brand > p{
+
+    margin:0 0 8px;
+
+    font-size:14px;
+
+    color:#f2dfe5;
+
+}
+
+
+.liquid-collagen-page
+.lc-footer-brand
+.lc-footer-tagline{
+
+    color:#e7c98f;
+
+    font-size:13px;
+
+    letter-spacing:.08em;
+
+}
+
+
+.liquid-collagen-page
+.lc-footer-links{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+
+.liquid-collagen-page
+.lc-footer-title{
+
+    margin:0 0 15px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:.18em;
+
+    color:#e7c98f;
+
+}
+
+
+.liquid-collagen-page
+.lc-footer-links a{
+
+    margin-bottom:9px;
+
+    color:#f8e9ed;
+
+    text-decoration:none;
+
+    font-size:13px;
+
+    transition:.3s ease;
+
+}
+
+
+.liquid-collagen-page
+.lc-footer-links a:hover{
+
+    color:#ffffff;
+
+}
+
+
+.liquid-collagen-page
+.lc-footer-bottom{
+
+    margin-top:45px;
+
+    padding-top:22px;
+
+    border-top:1px solid rgba(255,255,255,.15);
+
+    text-align:center;
+
+}
+
+
+.liquid-collagen-page
+.lc-footer-bottom p{
+
+    margin:0;
+
+    font-size:11px;
+
+    color:#d9c4ca;
+
+}
+
+
+/* =========================================================
+   20. MOBILE
+========================================================= */
+
+@media (max-width:900px){
+
+    .liquid-collagen-page
+    .lc-hero-grid{
 
         grid-template-columns:1fr;
 
@@ -1423,75 +2089,70 @@
     }
 
 
-    .quality-grid{
+    .liquid-collagen-page
+    .lc-hero-image{
+
+        order:2;
+
+        min-height:350px;
+
+    }
+
+
+    .liquid-collagen-page
+    .lc-hero-image > img{
+
+        height:350px;
+
+    }
+
+
+    .liquid-collagen-page
+    .lc-about-grid,
+    .liquid-collagen-page
+    .lc-origin-grid,
+    .liquid-collagen-page
+    .lc-daily-grid,
+    .liquid-collagen-page
+    .lc-oem-grid{
 
         grid-template-columns:1fr;
 
-        gap:20px;
+        gap:45px;
 
     }
 
 
-    .product-form-grid{
+    .liquid-collagen-page
+    .lc-support-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+
+    .liquid-collagen-page
+    .lc-daily-content{
+
+        padding:60px 40px;
+
+    }
+
+
+    .liquid-collagen-page
+    .lc-daily-image img{
+
+        min-height:420px;
+
+    }
+
+
+    .liquid-collagen-page
+    .lc-footer-grid{
 
         grid-template-columns:1fr;
 
-        gap:25px;
-
-    }
-
-
-    /* -----------------------------------------
-       Content
-    ----------------------------------------- */
-
-    .about-content h3{
-
-        font-size:27px;
-
-    }
-
-
-    .active-content h2,
-    .raw-content h2,
-    .oem-content h2{
-
-        font-size:30px;
-
-    }
-
-
-    .collagen-drink img{
-
-        height:400px;
-
-    }
-
-
-    .collagen-drink-overlay h2{
-
-        font-size:30px;
-
-    }
-
-
-    .evidence-content{
-
-        padding:30px 24px;
-
-    }
-
-
-    .collagen-cta{
-
-        padding:80px 0;
-
-    }
-
-
-    .collagen-cta h2{
-
-        font-size:32px;
+        gap:40px;
 
     }
 
@@ -1499,11 +2160,12 @@
 
 
 /* =========================================================
-   Small Mobile
+   21. TABLET / MOBILE
 ========================================================= */
 
-@media (max-width:480px){
+@media (max-width:768px){
 
+    .liquid-collagen-page
     .lc-hero{
 
         min-height:65vh;
@@ -1511,49 +2173,316 @@
     }
 
 
-    .lc-hero-content h1{
+    .liquid-collagen-page
+    .lc-hero-grid{
 
-        font-size:27px;
-
-    }
-
-
-    .lc-hero-copy{
-
-        font-size:18px;
+        padding:55px 0;
 
     }
 
 
-    .lc-hero-description{
+    .liquid-collagen-page
+    .lc-hero-text h1{
 
-        font-size:12px;
-
-    }
-
-
-    .collagen-drink img{
-
-        height:350px;
+        font-size:36px;
 
     }
 
 
-    .collagen-drink-overlay h2{
+    .liquid-collagen-page
+    .lc-hero-text h2{
 
-        font-size:25px;
-
-    }
-
-
-    .lc-product-form-image{
-
-        height:250px;
+        font-size:24px;
 
     }
 
 
-    .lc-btn{
+    .liquid-collagen-page
+    .lc-brand{
+
+        font-size:13px;
+
+        letter-spacing:.15em;
+
+    }
+
+
+    .liquid-collagen-page
+    .lc-lead{
+
+        font-size:16px;
+
+    }
+
+
+    .liquid-collagen-page
+    .section-title{
+
+        margin-bottom:45px;
+
+    }
+
+
+    .liquid-collagen-page
+    .section-title h2{
+
+        font-size:32px;
+
+    }
+
+
+    .liquid-collagen-page
+    .lc-section-lead{
+
+        font-size:15px;
+
+    }
+
+
+    .liquid-collagen-page
+    .lc-about,
+    .liquid-collagen-page
+    .lc-origin,
+    .liquid-collagen-page
+    .lc-features,
+    .liquid-collagen-page
+    .lc-support,
+    .liquid-collagen-page
+    .lc-quality,
+    .liquid-collagen-page
+    .lc-quality-statement,
+    .liquid-collagen-page
+    .lc-evidence,
+    .liquid-collagen-page
+    .lc-voice,
+    .liquid-collagen-page
+    .lc-oem,
+    .liquid-collagen-page
+    .lc-brand-message,
+    .liquid-collagen-page
+    .lc-contact{
+
+        padding:80px 0;
+
+    }
+
+
+    .liquid-collagen-page
+    .lc-feature-grid,
+    .liquid-collagen-page
+    .lc-quality-grid,
+    .liquid-collagen-page
+    .lc-evidence-grid,
+    .liquid-collagen-page
+    .lc-voice-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .liquid-collagen-page
+    .lc-support-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .liquid-collagen-page
+    .lc-about-text h3{
+
+        font-size:28px;
+
+    }
+
+
+    .liquid-collagen-page
+    .lc-origin-content h2,
+    .liquid-collagen-page
+    .lc-oem-content h2{
+
+        font-size:30px;
+
+    }
+
+
+    .liquid-collagen-page
+    .lc-quality-card,
+    .liquid-collagen-page
+    .lc-evidence-card,
+    .liquid-collagen-page
+    .lc-feature-item{
+
+        padding:32px 28px;
+
+    }
+
+
+    .liquid-collagen-page
+    .lc-quality-statement h2{
+
+        font-size:32px;
+
+    }
+
+
+    .liquid-collagen-page
+    .lc-brand-message h2{
+
+        font-size:36px;
+
+    }
+
+
+    .liquid-collagen-page
+    .lc-brand-message-inner > p:not(.lc-brand-message-label):not(.lc-brand-message-small){
+
+        font-size:23px;
+
+    }
+
+
+    .liquid-collagen-page
+    .lc-contact-inner h2{
+
+        font-size:32px;
+
+    }
+
+
+    .liquid-collagen-page
+    .lc-oem-points{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .liquid-collagen-page
+    .lc-footer-brand{
+
+        text-align:center;
+
+    }
+
+
+    .liquid-collagen-page
+    .lc-footer-links{
+
+        align-items:center;
+
+    }
+
+}
+
+
+/* =========================================================
+   22. SMALL MOBILE
+========================================================= */
+
+@media (max-width:480px){
+
+    .liquid-collagen-page
+    .lc-hero-text h1{
+
+        font-size:30px;
+
+    }
+
+
+    .liquid-collagen-page
+    .lc-hero-text h2{
+
+        font-size:21px;
+
+    }
+
+
+    .liquid-collagen-page
+    .lc-hero-grid{
+
+        padding:45px 0;
+
+    }
+
+
+    .liquid-collagen-page
+    .lc-hero-image > img{
+
+        height:300px;
+
+    }
+
+
+    .liquid-collagen-page
+    .glass-image{
+
+        width:110px;
+
+        height:110px;
+
+        right:12px;
+
+        bottom:12px;
+
+    }
+
+
+    .liquid-collagen-page
+    .lc-buttons a{
+
+        width:100%;
+
+        min-width:0;
+
+    }
+
+
+    .liquid-collagen-page
+    .lc-daily-image img{
+
+        min-height:350px;
+
+    }
+
+
+    .liquid-collagen-page
+    .lc-daily-content{
+
+        padding:50px 25px;
+
+    }
+
+
+    .liquid-collagen-page
+    .lc-daily-content h2{
+
+        font-size:28px;
+
+    }
+
+
+    .liquid-collagen-page
+    .lc-brand-message h2{
+
+        font-size:30px;
+
+    }
+
+
+    .liquid-collagen-page
+    .lc-contact-inner h2{
+
+        font-size:28px;
+
+    }
+
+
+    .liquid-collagen-page
+    .lc-gold-button,
+    .liquid-collagen-page
+    .lc-outline-button{
 
         width:100%;
 
