@@ -2184,10 +2184,11 @@ body{
 
     .lc-hero-text{
 
-        padding:130px 0 85px;
+        padding:110px 0 80px;
+
+        text-align:center;
 
     }
-
     .lc-about-grid,
     .lc-daily-grid,
     .lc-origin-grid,
