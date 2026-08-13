@@ -1459,12 +1459,23 @@ body{
 
     height:280px;
 
+    padding:20px;
+
     overflow:hidden;
 
-    background:#f5f5f5;
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:linear-gradient(
+        135deg,
+        #fff,
+        #fdf5f7
+    );
 
 }
-
 .lc-product-form-image img{
 
     width:100%;
