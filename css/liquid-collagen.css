@@ -150,256 +150,280 @@ body{
 }
 
 
-/* =========================================================
-   Hero
-========================================================= */
+/* =====================================
+Liquid Collagen Hero
+Version 2.1
+===================================== */
 
 .lc-hero{
 
-    min-height:620px;
+    position:relative;
 
-    margin-top:0;
+    width:100%;
+
+    height:438px;
+
+    min-height:438px;
 
     display:flex;
 
     align-items:center;
 
+    justify-content:center;
+
     overflow:hidden;
 
-    color:#fff;
+    background-image:url("../images/raw_collagen.jpg");
 
-    background:
+    background-size:cover;
 
-        linear-gradient(
-            90deg,
-            rgba(113,51,72,.82) 0%,
-            rgba(143,63,90,.68) 38%,
-            rgba(184,92,120,.34) 70%,
-            rgba(113,51,72,.20) 100%
-        ),
-
-        url("../images/raw_collagen.jpg")
-        center center / cover no-repeat;
+    background-position:center center;
 
 }
 
 
-/*
-    Heroは既存ページ同様、
-    コンテンツの背景ではなく
-    ページ全幅の背景として使用
-*/
+/* -------------------------------------
+Hero Overlay
+------------------------------------- */
 
-.lc-hero::before{
-
-    content:"";
+.lc-hero-overlay{
 
     position:absolute;
 
     inset:0;
 
     background:
-
         linear-gradient(
             135deg,
-            rgba(248,232,237,.12),
-            transparent 45%
+            rgba(92, 36, 57, 0.48),
+            rgba(142, 67, 91, 0.28),
+            rgba(196, 145, 65, 0.18)
         );
 
-    pointer-events:none;
+    z-index:1;
 
 }
 
-.lc-hero .container{
 
-    width:100%;
+/* -------------------------------------
+Hero Content
+------------------------------------- */
+
+.lc-hero-content{
 
     position:relative;
 
     z-index:2;
 
-}
+    width:100%;
 
-.lc-hero-grid{
+    max-width:1000px;
 
-    display:block;
+    margin:0 auto;
 
-}
+    padding:0 30px;
 
-.lc-hero-text{
+    text-align:center;
 
-    max-width:850px;
-
-    padding:145px 0 105px;
+    color:#ffffff;
 
 }
 
-.lc-brand{
 
-    display:inline-block;
+/* -------------------------------------
+Eyebrow
+------------------------------------- */
 
-    margin:0 0 20px;
-
-    padding-bottom:10px;
-
-    border-bottom:1px solid var(--lc-gold-light);
-
-    color:#f4dfb0;
-
-    font-size:14px;
-
-    letter-spacing:.18em;
-
-    font-weight:500;
-
-}
-
-.lc-hero h1{
+.lc-hero-eyebrow{
 
     margin:0 0 18px;
 
-    color:#fff;
+    font-size:15px;
 
-    font-size:clamp(48px,6vw,78px);
+    font-weight:600;
 
-    line-height:1.05;
-
-    font-weight:700;
-
-    letter-spacing:.02em;
-
-}
-
-.lc-hero h2{
-
-    margin:0 0 28px;
-
-    color:#f2d9e1;
-
-    font-size:clamp(25px,3vw,39px);
+    letter-spacing:0.24em;
 
     line-height:1.5;
 
-    font-weight:500;
+    color:#f8dfc0;
 
 }
 
-.lc-hero .lc-lead{
 
-    color:#fff;
+/* -------------------------------------
+Main Title
+------------------------------------- */
 
-    font-size:22px;
+.lc-hero-content h1{
+
+    margin:0;
+
+    font-size:42px;
+
+    font-weight:600;
+
+    line-height:1.25;
+
+    letter-spacing:0.04em;
+
+    color:#ffffff;
+
+    text-shadow:
+        0 2px 12px rgba(50,20,30,0.25);
+
+}
+
+
+/* -------------------------------------
+Main Copy
+------------------------------------- */
+
+.lc-hero-copy{
+
+    margin:22px 0 0;
+
+    font-size:24px;
+
+    font-weight:500;
+
+    line-height:1.7;
+
+    letter-spacing:0.08em;
+
+    color:#ffffff;
+
+    text-shadow:
+        0 2px 10px rgba(50,20,30,0.22);
+
+}
+
+
+/* -------------------------------------
+Description
+------------------------------------- */
+
+.lc-hero-description{
+
+    margin:14px 0 0;
+
+    font-size:15px;
+
+    font-weight:400;
 
     line-height:1.8;
 
-    margin:0 0 20px;
+    letter-spacing:0.05em;
 
-    font-weight:500;
-
-}
-
-.lc-hero-text > p:not(.lc-brand):not(.lc-lead){
-
-    max-width:720px;
-
-    color:rgba(255,255,255,.90);
-
-    font-size:16px;
-
-    line-height:2;
-
-    margin:0 0 35px;
-
-}
-
-.lc-buttons{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:15px;
-
-}
-
-.lc-buttons a{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    min-width:210px;
-
-    min-height:54px;
-
-    padding:14px 30px;
-
-    border-radius:2px;
-
-    text-decoration:none;
-
-    transition:.3s ease;
-
-    font-size:14px;
-
-    letter-spacing:.04em;
-
-}
-
-.lc-buttons .btn-main{
-
-    color:#fff;
-
-    background:linear-gradient(
-        135deg,
-        var(--lc-gold),
-        #b99452
-    );
-
-    border:1px solid var(--lc-gold);
-
-    box-shadow:0 10px 30px rgba(0,0,0,.15);
-
-}
-
-.lc-buttons .btn-main:hover{
-
-    transform:translateY(-2px);
-
-    box-shadow:0 15px 35px rgba(0,0,0,.22);
-
-}
-
-.lc-buttons .btn-sub{
-
-    color:#fff;
-
-    border:1px solid rgba(255,255,255,.65);
-
-    background:rgba(255,255,255,.08);
-
-    backdrop-filter:blur(8px);
-
-}
-
-.lc-buttons .btn-sub:hover{
-
-    background:rgba(255,255,255,.18);
+    color:#fff9f8;
 
 }
 
 
-/* Hero image is hidden because raw_collagen is now full-width background */
+/* =====================================
+Responsive
+===================================== */
 
-.lc-hero-image{
+@media (max-width:768px){
 
-    display:none;
+    .lc-hero{
+
+        height:400px;
+
+        min-height:400px;
+
+        background-position:center center;
+
+    }
+
+
+    .lc-hero-content{
+
+        padding:0 22px;
+
+    }
+
+
+    .lc-hero-eyebrow{
+
+        margin-bottom:14px;
+
+        font-size:12px;
+
+        letter-spacing:0.18em;
+
+    }
+
+
+    .lc-hero-content h1{
+
+        font-size:29px;
+
+        line-height:1.35;
+
+        letter-spacing:0.02em;
+
+    }
+
+
+    .lc-hero-copy{
+
+        margin-top:18px;
+
+        font-size:20px;
+
+        line-height:1.6;
+
+        letter-spacing:0.04em;
+
+    }
+
+
+    .lc-hero-description{
+
+        margin-top:12px;
+
+        font-size:13px;
+
+        line-height:1.7;
+
+    }
 
 }
 
 
+@media (max-width:480px){
+
+    .lc-hero{
+
+        height:380px;
+
+        min-height:380px;
+
+    }
+
+
+    .lc-hero-content{
+
+        padding:0 18px;
+
+    }
+
+
+    .lc-hero-content h1{
+
+        font-size:25px;
+
+    }
+
+
+    .lc-hero-copy{
+
+        font-size:18px;
+
+    }
+
+}
 /* =========================================================
    About
 ========================================================= */
