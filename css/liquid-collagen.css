@@ -1,61 +1,62 @@
 /* =========================================================
-   Liquid Collagen
-   Dedicated Style Sheet
-   Version 1 - Complete
+   Liquid Collagen Brand Page
+   Version 2
+   ---------------------------------------------------------
+   Dedicated CSS
+   Does not modify the existing site-wide style.css
 ========================================================= */
+
+
+/* =========================================================
+   Brand Variables
+========================================================= */
+
+:root{
+
+    --lc-rose:#b85c78;
+
+    --lc-rose-dark:#8f3f5a;
+
+    --lc-rose-deep:#713348;
+
+    --lc-pink:#f8e8ed;
+
+    --lc-pink-soft:#fdf5f7;
+
+    --lc-gold:#c9a86a;
+
+    --lc-gold-light:#e5d0a3;
+
+    --lc-navy:#10384d;
+
+    --lc-text:#27363d;
+
+    --lc-muted:#69747a;
+
+    --lc-white:#ffffff;
+
+    --lc-border:rgba(143,63,90,.14);
+
+}
 
 
 /* =========================================================
    Base
 ========================================================= */
 
-.collagen-page,
-body:has(.collagen-hero){
+body{
 
-    --lc-pink-light:#fff7f8;
-    --lc-pink:#f3d9df;
-    --lc-pink-deep:#d88d9d;
-    --lc-rose:#b65f73;
-    --lc-rose-dark:#8f4659;
-    --lc-gold:#c9a96e;
-    --lc-gold-light:#e5d3a8;
-    --lc-navy:#183746;
-    --lc-text:#39454b;
-    --lc-muted:#7b858a;
-    --lc-white:#ffffff;
-
-    --lc-shadow:
-        0 18px 50px rgba(80,45,55,.10);
-
-    --lc-radius:22px;
+    color:var(--lc-text);
 
 }
 
-
-/* =========================================================
-   Common
-========================================================= */
-
-.collagen-hero *,
-.collagen-about *,
-.lc-quality *,
-.lc-quality-statement *,
-.lc-evidence *,
-.lc-voice *,
-.lc-product-flow *,
-.lc-product-forms *,
-.lc-oem *,
-.lc-brand-message *,
-.lc-contact *,
-.lc-footer *{
-
-    box-sizing:border-box;
-
-}
-
-
-.collagen-hero,
-.collagen-about,
+.lc-hero,
+.lc-about,
+.lc-support,
+.lc-daily,
+.lc-origin,
+.lc-features,
+.lc-oem-intro,
 .lc-quality,
 .lc-quality-statement,
 .lc-evidence,
@@ -67,15 +68,35 @@ body:has(.collagen-hero){
 .lc-contact,
 .lc-footer{
 
-    font-family:
-        "Noto Sans JP",
-        sans-serif;
+    position:relative;
+
+}
+
+.lc-hero *,
+.lc-about *,
+.lc-support *,
+.lc-daily *,
+.lc-origin *,
+.lc-features *,
+.lc-oem-intro *,
+.lc-quality *,
+.lc-quality-statement *,
+.lc-evidence *,
+.lc-voice *,
+.lc-product-flow *,
+.lc-product-forms *,
+.lc-oem *,
+.lc-brand-message *,
+.lc-contact *,
+.lc-footer{
+
+    box-sizing:border-box;
 
 }
 
 
 /* =========================================================
-   Section Title
+   Section Common
 ========================================================= */
 
 .lc-section-title{
@@ -87,7 +108,6 @@ body:has(.collagen-hero){
     margin:0 auto 70px;
 
 }
-
 
 .lc-section-title .section-sub{
 
@@ -103,44 +123,42 @@ body:has(.collagen-hero){
 
 }
 
-
 .lc-section-title h2{
 
     color:var(--lc-navy);
 
     font-size:42px;
 
-    line-height:1.45;
-
-    letter-spacing:.04em;
+    line-height:1.35;
 
     margin:0 0 22px;
 
-}
+    font-weight:700;
 
+}
 
 .lc-section-lead{
 
     color:var(--lc-muted);
 
-    font-size:16px;
+    font-size:17px;
 
     line-height:2;
 
-    margin:0 auto;
+    margin:0;
 
 }
 
 
 /* =========================================================
-   HERO
+   Hero
 ========================================================= */
 
-.collagen-hero{
+.lc-hero{
 
-    position:relative;
+    min-height:620px;
 
-    min-height:calc(100vh - 82px);
+    margin-top:0;
 
     display:flex;
 
@@ -154,17 +172,25 @@ body:has(.collagen-hero){
 
         linear-gradient(
             90deg,
-            rgba(40,22,30,.58),
-            rgba(40,22,30,.20)
+            rgba(113,51,72,.82) 0%,
+            rgba(143,63,90,.68) 38%,
+            rgba(184,92,120,.34) 70%,
+            rgba(113,51,72,.20) 100%
         ),
 
-        url("../images/liquid-collagen-hero.jpg")
+        url("../images/raw_collagen.jpg")
         center center / cover no-repeat;
 
 }
 
 
-.collagen-hero::after{
+/*
+    Heroは既存ページ同様、
+    コンテンツの背景ではなく
+    ページ全幅の背景として使用
+*/
+
+.lc-hero::before{
 
     content:"";
 
@@ -175,148 +201,128 @@ body:has(.collagen-hero){
     background:
 
         linear-gradient(
-            180deg,
-            rgba(0,0,0,.08),
-            rgba(0,0,0,.18)
+            135deg,
+            rgba(248,232,237,.12),
+            transparent 45%
         );
 
     pointer-events:none;
 
 }
 
+.lc-hero .container{
 
-.hero-grid{
+    width:100%;
 
     position:relative;
 
     z-index:2;
 
-    width:100%;
+}
+
+.lc-hero-grid{
+
+    display:block;
 
 }
 
+.lc-hero-text{
 
-.hero-text{
+    max-width:850px;
 
-    max-width:720px;
-
-    padding:110px 0;
+    padding:145px 0 105px;
 
 }
 
-
-.hero-brand{
+.lc-brand{
 
     display:inline-block;
 
-    font-size:13px;
+    margin:0 0 20px;
 
-    letter-spacing:.22em;
+    padding-bottom:10px;
+
+    border-bottom:1px solid var(--lc-gold-light);
+
+    color:#f4dfb0;
+
+    font-size:14px;
+
+    letter-spacing:.18em;
 
     font-weight:500;
-
-    margin:0 0 22px;
-
-    color:#fff;
 
 }
 
+.lc-hero h1{
 
-.collagen-hero h1{
+    margin:0 0 18px;
 
-    margin:0;
+    color:#fff;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size:76px;
+    font-size:clamp(48px,6vw,78px);
 
     line-height:1.05;
 
-    font-weight:500;
+    font-weight:700;
 
     letter-spacing:.02em;
 
 }
 
+.lc-hero h2{
 
-.collagen-hero h1 span{
+    margin:0 0 28px;
 
-    color:#fff;
+    color:#f2d9e1;
 
-}
-
-
-.collagen-hero h2{
-
-    margin:25px 0 30px;
-
-    color:#f6dce1;
-
-    font-size:24px;
+    font-size:clamp(25px,3vw,39px);
 
     line-height:1.5;
 
     font-weight:500;
 
-    letter-spacing:.06em;
-
 }
 
-
-.collagen-hero h3{
-
-    margin:0 0 24px;
+.lc-hero .lc-lead{
 
     color:#fff;
 
-    font-size:27px;
+    font-size:22px;
 
-    line-height:1.65;
+    line-height:1.8;
+
+    margin:0 0 20px;
 
     font-weight:500;
 
-    letter-spacing:.04em;
-
 }
 
+.lc-hero-text > p:not(.lc-brand):not(.lc-lead){
 
-.collagen-hero .hero-text > p:not(.hero-brand){
+    max-width:720px;
 
-    color:rgba(255,255,255,.92);
+    color:rgba(255,255,255,.90);
 
     font-size:16px;
 
     line-height:2;
 
-    margin:0;
-
-    max-width:650px;
+    margin:0 0 35px;
 
 }
 
-
-/* =========================================================
-   Hero Buttons
-========================================================= */
-
-.hero-buttons{
+.lc-buttons{
 
     display:flex;
 
     flex-wrap:wrap;
 
-    gap:16px;
-
-    margin-top:38px;
+    gap:15px;
 
 }
 
-
-.btn-gold,
-.btn-outline{
+.lc-buttons a{
 
     display:inline-flex;
 
@@ -324,97 +330,93 @@ body:has(.collagen-hero){
 
     justify-content:center;
 
-    min-width:190px;
+    min-width:210px;
 
     min-height:54px;
 
-    padding:14px 28px;
+    padding:14px 30px;
 
-    border-radius:999px;
+    border-radius:2px;
 
     text-decoration:none;
 
-    font-size:14px;
+    transition:.3s ease;
 
-    font-weight:700;
+    font-size:14px;
 
     letter-spacing:.04em;
 
-    transition:
-        transform .3s ease,
-        background .3s ease,
-        color .3s ease,
-        border-color .3s ease;
-
 }
 
-
-.btn-gold{
+.lc-buttons .btn-main{
 
     color:#fff;
 
-    background:var(--lc-gold);
+    background:linear-gradient(
+        135deg,
+        var(--lc-gold),
+        #b99452
+    );
 
     border:1px solid var(--lc-gold);
 
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
 }
 
+.lc-buttons .btn-main:hover{
 
-.btn-outline{
+    transform:translateY(-2px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.22);
+
+}
+
+.lc-buttons .btn-sub{
 
     color:#fff;
 
-    background:rgba(255,255,255,.08);
-
     border:1px solid rgba(255,255,255,.65);
 
-}
+    background:rgba(255,255,255,.08);
 
-
-.btn-gold:hover,
-.btn-outline:hover{
-
-    transform:translateY(-3px);
+    backdrop-filter:blur(8px);
 
 }
 
+.lc-buttons .btn-sub:hover{
 
-.btn-gold:hover{
-
-    background:#b9985b;
+    background:rgba(255,255,255,.18);
 
 }
 
 
-.btn-outline:hover{
+/* Hero image is hidden because raw_collagen is now full-width background */
 
-    background:#fff;
+.lc-hero-image{
 
-    color:var(--lc-rose-dark);
+    display:none;
 
 }
 
 
 /* =========================================================
-   ABOUT
+   About
 ========================================================= */
 
-.collagen-about{
+.lc-about{
 
-    padding:120px 0;
+    padding:115px 0;
 
-    background:#fff;
+    background:var(--lc-white);
 
 }
 
-
-.about-grid{
+.lc-about-grid{
 
     display:grid;
 
-    grid-template-columns:
-        minmax(0,1fr)
-        minmax(0,1fr);
+    grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
 
     gap:80px;
 
@@ -422,53 +424,67 @@ body:has(.collagen-hero){
 
 }
 
+.lc-about-image{
 
-.about-image{
-
-    overflow:hidden;
-
-    border-radius:var(--lc-radius);
-
-    box-shadow:var(--lc-shadow);
+    position:relative;
 
 }
 
+.lc-about-image::after{
 
-.about-image img{
+    content:"";
 
-    display:block;
+    position:absolute;
+
+    left:25px;
+
+    bottom:-25px;
+
+    width:70%;
+
+    height:70%;
+
+    background:var(--lc-pink);
+
+    z-index:0;
+
+}
+
+.lc-about-image img{
+
+    position:relative;
+
+    z-index:1;
 
     width:100%;
 
-    height:560px;
+    display:block;
 
     object-fit:cover;
 
+    aspect-ratio:1.25/1;
+
 }
 
+.lc-about-text h3{
 
-.about-content h3{
+    color:var(--lc-rose-dark);
 
-    margin:0 0 30px;
-
-    color:var(--lc-navy);
-
-    font-size:34px;
+    font-size:30px;
 
     line-height:1.6;
 
-    font-weight:500;
+    margin:0 0 30px;
 
 }
 
-
-.about-content p{
+.lc-about-text p{
 
     color:var(--lc-text);
 
     font-size:16px;
 
-    line-height:2.15;
+    line-height:2;
 
     margin:0 0 22px;
 
@@ -476,112 +492,399 @@ body:has(.collagen-hero){
 
 
 /* =========================================================
-   QUALITY
+   Concept
 ========================================================= */
 
-.lc-quality{
+.lc-support{
 
     padding:120px 0;
 
-    background:var(--lc-pink-light);
+    background:
+
+        linear-gradient(
+            180deg,
+            var(--lc-pink-soft),
+            var(--lc-pink)
+        );
 
 }
 
-
-.lc-quality-grid{
+.lc-support-grid{
 
     display:grid;
 
-    grid-template-columns:
-        repeat(2,minmax(0,1fr));
+    grid-template-columns:repeat(4,1fr);
 
-    gap:24px;
+    gap:20px;
 
 }
 
-
-.lc-quality-card{
+.lc-support-card{
 
     position:relative;
 
-    padding:42px;
+    min-height:310px;
 
-    background:#fff;
+    padding:40px 30px;
 
-    border:1px solid rgba(182,95,115,.10);
+    background:rgba(255,255,255,.82);
 
-    border-radius:var(--lc-radius);
+    border:1px solid rgba(184,92,120,.12);
 
-    box-shadow:
-        0 10px 35px rgba(70,40,50,.06);
-
-    transition:
-        transform .3s ease,
-        box-shadow .3s ease;
+    transition:.3s ease;
 
 }
 
+.lc-support-card:hover{
 
-.lc-quality-card:hover{
+    transform:translateY(-6px);
 
-    transform:translateY(-5px);
-
-    box-shadow:
-        0 18px 45px rgba(70,40,50,.10);
+    box-shadow:0 20px 45px rgba(113,51,72,.10);
 
 }
 
-
-.lc-quality-number{
-
-    position:absolute;
-
-    top:30px;
-
-    right:34px;
+.lc-support-number{
 
     color:var(--lc-gold);
 
-    font-family:
-        Georgia,
-        serif;
+    font-size:14px;
 
-    font-size:24px;
+    letter-spacing:.12em;
+
+    margin-bottom:30px;
+
+}
+
+.lc-support-card h3{
+
+    color:var(--lc-rose-dark);
+
+    font-size:25px;
+
+    margin:0 0 20px;
+
+}
+
+.lc-support-card p{
+
+    color:var(--lc-muted);
+
+    font-size:14px;
+
+    line-height:2;
+
+    margin:0;
 
 }
 
 
-.lc-quality-label{
+/* =========================================================
+   Daily Life
+========================================================= */
 
-    margin:0 0 13px;
+.lc-daily{
+
+    padding:120px 0;
+
+    background:#fff;
+
+}
+
+.lc-daily-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+.lc-daily-image{
+
+    position:relative;
+
+}
+
+.lc-daily-image::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:20px -20px -20px 20px;
+
+    background:var(--lc-pink);
+
+    z-index:0;
+
+}
+
+.lc-daily-image img{
+
+    position:relative;
+
+    z-index:1;
+
+    width:100%;
+
+    display:block;
+
+}
+
+.lc-daily-content{
+
+    padding-left:15px;
+
+}
+
+.lc-daily-content .section-sub{
 
     color:var(--lc-rose);
 
-    font-size:11px;
+    letter-spacing:.18em;
+
+    font-size:13px;
 
     font-weight:700;
 
-    letter-spacing:.18em;
-
 }
 
-
-.lc-quality-card h3{
-
-    margin:0 0 22px;
+.lc-daily-content h2{
 
     color:var(--lc-navy);
 
-    font-size:24px;
+    font-size:40px;
 
     line-height:1.5;
+
+    margin:18px 0 30px;
+
+}
+
+.lc-daily-content p{
+
+    color:var(--lc-text);
+
+    font-size:16px;
+
+    line-height:2;
+
+    margin:0 0 20px;
+
+}
+
+.lc-daily-list{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:30px;
+
+}
+
+.lc-daily-list span{
+
+    padding:8px 16px;
+
+    color:var(--lc-rose-dark);
+
+    background:var(--lc-pink);
+
+    border:1px solid rgba(184,92,120,.18);
+
+    font-size:12px;
+
+    letter-spacing:.06em;
 
 }
 
 
-.lc-quality-card p:not(.lc-quality-label):not(.lc-quality-number){
+/* =========================================================
+   Origin
+========================================================= */
 
-    color:var(--lc-text);
+.lc-origin{
+
+    padding:120px 0;
+
+    background:var(--lc-navy);
+
+    color:#fff;
+
+}
+
+.lc-origin-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+.lc-origin-content .section-sub{
+
+    color:var(--lc-gold-light);
+
+    letter-spacing:.18em;
+
+    font-size:13px;
+
+}
+
+.lc-origin-content h2{
+
+    color:#fff;
+
+    font-size:42px;
+
+    line-height:1.5;
+
+    margin:20px 0 30px;
+
+}
+
+.lc-origin-content p{
+
+    color:rgba(255,255,255,.78);
+
+    font-size:16px;
+
+    line-height:2;
+
+    margin:0 0 22px;
+
+}
+
+.lc-origin-image{
+
+    position:relative;
+
+}
+
+.lc-origin-image img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+.lc-origin-caption{
+
+    position:absolute;
+
+    left:25px;
+
+    right:25px;
+
+    bottom:25px;
+
+    padding:18px 22px;
+
+    background:rgba(16,56,77,.82);
+
+    border-left:3px solid var(--lc-gold);
+
+    backdrop-filter:blur(8px);
+
+}
+
+.lc-origin-caption span{
+
+    display:block;
+
+    color:var(--lc-gold-light);
+
+    font-size:11px;
+
+    letter-spacing:.15em;
+
+    margin-bottom:5px;
+
+}
+
+.lc-origin-caption strong{
+
+    color:#fff;
+
+    font-size:16px;
+
+}
+
+
+/* =========================================================
+   Features
+========================================================= */
+
+.lc-features{
+
+    padding:120px 0;
+
+    background:var(--lc-pink-soft);
+
+}
+
+.lc-feature-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:1px;
+
+    background:var(--lc-border);
+
+    border:1px solid var(--lc-border);
+
+}
+
+.lc-feature-item{
+
+    min-height:300px;
+
+    padding:45px;
+
+    background:#fff;
+
+}
+
+.lc-feature-index{
+
+    display:block;
+
+    color:var(--lc-gold);
+
+    font-size:13px;
+
+    letter-spacing:.12em;
+
+    margin-bottom:25px;
+
+}
+
+.lc-feature-item h3{
+
+    color:var(--lc-rose-dark);
+
+    font-size:25px;
+
+    margin:0 0 20px;
+
+}
+
+.lc-feature-item p{
+
+    color:var(--lc-muted);
 
     font-size:15px;
 
@@ -593,153 +896,167 @@ body:has(.collagen-hero){
 
 
 /* =========================================================
-   QUALITY STATEMENT
+   OEM Intro
 ========================================================= */
 
-.lc-quality-statement{
+.lc-oem-intro{
 
-    padding:110px 0;
+    padding:120px 0;
 
     background:#fff;
 
 }
 
+.lc-oem-grid{
 
-.lc-quality-statement-inner{
+    display:grid;
 
-    max-width:850px;
+    grid-template-columns:1fr 1fr;
 
-    margin:auto;
+    gap:80px;
 
-    text-align:center;
+    align-items:center;
 
 }
 
+.lc-oem-image img{
 
-.lc-quality-statement .section-sub{
+    width:100%;
+
+    display:block;
+
+}
+
+.lc-oem-content .section-sub{
 
     color:var(--lc-rose);
 
-    font-size:12px;
+    letter-spacing:.18em;
+
+    font-size:13px;
 
     font-weight:700;
 
-    letter-spacing:.18em;
-
-    margin-bottom:20px;
-
 }
 
-
-.lc-quality-statement h2{
+.lc-oem-content h2{
 
     color:var(--lc-navy);
 
-    font-size:38px;
+    font-size:42px;
 
-    line-height:1.55;
+    line-height:1.5;
 
-    margin:0 0 35px;
+    margin:20px 0 30px;
 
 }
 
-
-.lc-quality-statement p{
+.lc-oem-content p{
 
     color:var(--lc-text);
 
     font-size:16px;
 
-    line-height:2.15;
+    line-height:2;
 
-    margin:0 0 22px;
+    margin:0 0 20px;
+
+}
+
+.lc-text-link{
+
+    display:inline-flex;
+
+    gap:12px;
+
+    align-items:center;
+
+    margin-top:20px;
+
+    color:var(--lc-rose-dark);
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    border-bottom:1px solid var(--lc-gold);
+
+    padding-bottom:8px;
+
+}
+
+.lc-text-link span{
+
+    color:var(--lc-gold);
 
 }
 
 
 /* =========================================================
-   EVIDENCE
+   Quality
 ========================================================= */
 
-.lc-evidence{
+.lc-quality{
 
     padding:120px 0;
 
-    background:#faf8f8;
+    background:var(--lc-pink);
 
 }
 
-
-.lc-evidence-grid{
+.lc-quality-grid{
 
     display:grid;
 
-    grid-template-columns:
-        repeat(2,minmax(0,1fr));
+    grid-template-columns:repeat(2,1fr);
 
-    gap:24px;
+    gap:20px;
 
 }
 
+.lc-quality-card{
 
-.lc-evidence-card{
+    position:relative;
 
-    padding:42px;
+    padding:45px;
 
     background:#fff;
 
-    border-radius:var(--lc-radius);
+    border-top:3px solid var(--lc-rose);
 
-    border:1px solid #eee6e8;
+    box-shadow:0 10px 35px rgba(113,51,72,.06);
 
 }
 
+.lc-quality-number{
 
-.lc-evidence-icon{
+    position:absolute;
 
-    width:48px;
+    top:25px;
 
-    height:48px;
+    right:30px;
 
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    margin-bottom:24px;
-
-    border-radius:50%;
-
-    background:var(--lc-pink);
-
-    color:var(--lc-rose-dark);
-
-    font-family:
-        Georgia,
-        serif;
+    color:var(--lc-gold);
 
     font-size:14px;
 
 }
 
-
-.lc-evidence-label{
+.lc-quality-label{
 
     color:var(--lc-rose);
 
     font-size:11px;
 
+    letter-spacing:.15em;
+
     font-weight:700;
-
-    letter-spacing:.18em;
-
-    margin:0 0 12px;
 
 }
 
-
-.lc-evidence-card h3{
+.lc-quality-card h3{
 
     color:var(--lc-navy);
 
@@ -747,16 +1064,167 @@ body:has(.collagen-hero){
 
     line-height:1.5;
 
-    margin:0 0 22px;
+    margin:12px 0 22px;
+
+}
+
+.lc-quality-card > p:not(.lc-quality-label){
+
+    color:var(--lc-muted);
+
+    font-size:15px;
+
+    line-height:2;
+
+    margin:0;
 
 }
 
 
+/* =========================================================
+   Quality Statement
+========================================================= */
+
+.lc-quality-statement{
+
+    padding:115px 0;
+
+    background:#fff;
+
+}
+
+.lc-quality-statement-inner{
+
+    max-width:900px;
+
+    margin:0 auto;
+
+    text-align:center;
+
+}
+
+.lc-quality-statement-inner .section-sub{
+
+    color:var(--lc-rose);
+
+    font-size:13px;
+
+    letter-spacing:.18em;
+
+}
+
+.lc-quality-statement-inner h2{
+
+    color:var(--lc-navy);
+
+    font-size:40px;
+
+    margin:20px 0 30px;
+
+}
+
+.lc-quality-statement-inner p{
+
+    color:var(--lc-muted);
+
+    font-size:16px;
+
+    line-height:2;
+
+    margin:0 0 20px;
+
+}
+
+
+/* =========================================================
+   Evidence
+========================================================= */
+
+.lc-evidence{
+
+    padding:120px 0;
+
+    background:var(--lc-navy);
+
+}
+
+.lc-evidence .lc-section-title h2{
+
+    color:#fff;
+
+}
+
+.lc-evidence .lc-section-lead{
+
+    color:rgba(255,255,255,.68);
+
+}
+
+.lc-evidence .section-sub{
+
+    color:var(--lc-gold-light);
+
+}
+
+.lc-evidence-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.lc-evidence-card{
+
+    padding:45px;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(229,208,163,.18);
+
+}
+
+.lc-evidence-icon{
+
+    color:var(--lc-gold-light);
+
+    font-size:13px;
+
+    letter-spacing:.12em;
+
+    margin-bottom:20px;
+
+}
+
+.lc-evidence-label{
+
+    color:var(--lc-gold-light);
+
+    font-size:11px;
+
+    letter-spacing:.15em;
+
+    margin:0 0 10px;
+
+}
+
+.lc-evidence-card h3{
+
+    color:#fff;
+
+    font-size:23px;
+
+    margin:0 0 22px;
+
+}
+
 .lc-evidence-card p{
 
-    color:var(--lc-text);
+    color:rgba(255,255,255,.75);
 
-    font-size:15px;
+    font-size:14px;
 
     line-height:2;
 
@@ -764,46 +1232,40 @@ body:has(.collagen-hero){
 
 }
 
-
 .lc-evidence-card .lc-note{
 
-    color:#8b8587;
+    padding-top:18px;
+
+    border-top:1px solid rgba(255,255,255,.12);
+
+    color:rgba(255,255,255,.48);
 
     font-size:12px;
-
-    line-height:1.8;
-
-    padding-top:15px;
-
-    border-top:1px solid #eee;
 
 }
 
 
 /* =========================================================
-   VOICE
+   Voice
 ========================================================= */
 
 .lc-voice{
 
     padding:120px 0;
 
-    background:#fff;
+    background:var(--lc-pink-soft);
 
 }
-
 
 .lc-voice-grid{
 
     display:grid;
 
-    grid-template-columns:
-        repeat(3,minmax(0,1fr));
+    grid-template-columns:repeat(3,1fr);
 
-    gap:24px;
+    gap:20px;
 
 }
-
 
 .lc-voice-card{
 
@@ -811,39 +1273,31 @@ body:has(.collagen-hero){
 
     margin:0;
 
-    padding:40px 34px;
+    padding:40px 30px;
 
-    background:var(--lc-pink-light);
+    background:#fff;
 
-    border-radius:var(--lc-radius);
-
-    border:1px solid rgba(182,95,115,.10);
+    border-top:3px solid var(--lc-gold);
 
 }
-
 
 .lc-voice-card::before{
 
     content:"“";
 
-    position:absolute;
+    display:block;
 
-    top:14px;
+    color:var(--lc-rose);
 
-    left:24px;
+    font-family:Georgia,serif;
 
-    color:var(--lc-pink-deep);
+    font-size:50px;
 
-    font-family:
-        Georgia,
-        serif;
+    line-height:.7;
 
-    font-size:58px;
-
-    line-height:1;
+    margin-bottom:20px;
 
 }
-
 
 .lc-voice-card p{
 
@@ -853,14 +1307,11 @@ body:has(.collagen-hero){
 
     line-height:2;
 
-    margin:28px 0 25px;
+    margin:0 0 25px;
 
 }
 
-
 .lc-voice-card cite{
-
-    display:block;
 
     color:var(--lc-muted);
 
@@ -868,20 +1319,17 @@ body:has(.collagen-hero){
 
     font-style:normal;
 
-    line-height:1.7;
-
 }
-
 
 .lc-voice-note{
 
-    max-width:850px;
+    max-width:800px;
 
     margin:35px auto 0;
 
-    color:#888;
-
     text-align:center;
+
+    color:var(--lc-muted);
 
     font-size:12px;
 
@@ -891,32 +1339,16 @@ body:has(.collagen-hero){
 
 
 /* =========================================================
-   PRODUCT FLOW
+   Product Flow
 ========================================================= */
 
 .lc-product-flow{
 
     padding:120px 0;
 
-    background:var(--lc-navy);
+    background:#fff;
 
 }
-
-
-.lc-product-flow .lc-section-title h2,
-.lc-product-flow .lc-section-title .section-sub{
-
-    color:#fff;
-
-}
-
-
-.lc-product-flow .lc-section-lead{
-
-    color:rgba(255,255,255,.72);
-
-}
-
 
 .lc-flow{
 
@@ -928,145 +1360,110 @@ body:has(.collagen-hero){
 
     max-width:1000px;
 
-    margin:auto;
+    margin:0 auto;
 
 }
-
 
 .lc-flow-item{
 
-    width:210px;
+    width:250px;
 
-    min-height:190px;
+    min-height:180px;
 
-    padding:35px 20px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    justify-content:center;
+    padding:30px;
 
     text-align:center;
 
-    background:rgba(255,255,255,.06);
+    background:var(--lc-pink-soft);
 
-    border:1px solid rgba(255,255,255,.16);
-
-    border-radius:var(--lc-radius);
+    border:1px solid var(--lc-border);
 
 }
-
 
 .lc-flow-number{
 
-    color:var(--lc-gold-light);
+    display:block;
 
-    font-family:
-        Georgia,
-        serif;
-
-    font-size:24px;
-
-    margin-bottom:14px;
-
-}
-
-
-.lc-flow-item h3{
-
-    color:#fff;
-
-    font-family:
-        Georgia,
-        serif;
-
-    font-size:20px;
-
-    font-weight:500;
-
-    margin:0 0 10px;
-
-}
-
-
-.lc-flow-item p{
-
-    color:rgba(255,255,255,.7);
+    color:var(--lc-gold);
 
     font-size:13px;
 
-    margin:0;
+    margin-bottom:15px;
 
 }
 
+.lc-flow-item h3{
+
+    color:var(--lc-rose-dark);
+
+    font-size:20px;
+
+    margin:0 0 12px;
+
+}
+
+.lc-flow-item p{
+
+    color:var(--lc-muted);
+
+    margin:0;
+
+    font-size:14px;
+
+}
 
 .lc-flow-line{
 
-    width:80px;
+    width:70px;
 
     height:1px;
 
     background:var(--lc-gold);
 
-    opacity:.7;
-
 }
 
 
 /* =========================================================
-   PRODUCT FORMS
+   Product Forms
 ========================================================= */
 
 .lc-product-forms{
 
     padding:120px 0;
 
-    background:#fff;
+    background:var(--lc-pink);
 
 }
-
 
 .lc-product-form-grid{
 
     display:grid;
 
-    grid-template-columns:
-        repeat(3,minmax(0,1fr));
+    grid-template-columns:repeat(3,1fr);
 
-    gap:28px;
+    gap:22px;
 
 }
-
 
 .lc-product-form-card{
 
-    overflow:hidden;
-
     background:#fff;
 
-    border-radius:var(--lc-radius);
+    overflow:hidden;
 
-    border:1px solid #eee6e8;
-
-    box-shadow:
-        0 12px 35px rgba(60,40,45,.06);
+    box-shadow:0 12px 40px rgba(113,51,72,.07);
 
 }
-
 
 .lc-product-form-image{
 
-    height:290px;
+    height:280px;
 
     overflow:hidden;
 
-    background:#f8f5f5;
+    background:#f5f5f5;
 
 }
-
 
 .lc-product-form-image img{
 
@@ -1074,14 +1471,13 @@ body:has(.collagen-hero){
 
     height:100%;
 
-    display:block;
-
     object-fit:cover;
 
-    transition:transform .5s ease;
+    display:block;
+
+    transition:.5s ease;
 
 }
-
 
 .lc-product-form-card:hover
 .lc-product-form-image img{
@@ -1090,58 +1486,47 @@ body:has(.collagen-hero){
 
 }
 
-
 .lc-product-form-content{
 
-    padding:34px;
+    padding:35px;
 
 }
-
 
 .lc-product-form-number{
 
-    margin:0 0 8px;
-
     color:var(--lc-gold);
 
-    font-family:
-        Georgia,
-        serif;
+    font-size:13px;
 
-    font-size:24px;
+    margin:0 0 5px;
 
 }
 
-
 .lc-product-form-label{
-
-    margin:0 0 15px;
 
     color:var(--lc-rose);
 
     font-size:10px;
 
-    font-weight:700;
+    letter-spacing:.14em;
 
-    letter-spacing:.16em;
+    margin:0 0 12px;
 
 }
-
 
 .lc-product-form-content h3{
 
-    margin:0 0 20px;
-
     color:var(--lc-navy);
 
-    font-size:25px;
+    font-size:24px;
+
+    margin:0 0 20px;
 
 }
 
+.lc-product-form-content p{
 
-.lc-product-form-content p:not(.lc-product-form-number):not(.lc-product-form-label){
-
-    color:var(--lc-text);
+    color:var(--lc-muted);
 
     font-size:14px;
 
@@ -1158,59 +1543,55 @@ body:has(.collagen-hero){
 
 .lc-oem{
 
-    padding:120px 0;
+    padding:130px 0;
 
-    background:var(--lc-pink-light);
+    background:
+
+        linear-gradient(
+            135deg,
+            var(--lc-rose-deep),
+            var(--lc-rose-dark)
+        );
 
 }
-
 
 .lc-oem-inner{
 
     display:grid;
 
-    grid-template-columns:
-        minmax(0,1.05fr)
-        minmax(0,.95fr);
+    grid-template-columns:1fr 1fr;
 
-    gap:70px;
+    gap:75px;
 
     align-items:center;
 
 }
 
-
 .lc-oem-content .section-sub{
 
-    color:var(--lc-rose);
+    color:var(--lc-gold-light);
 
-    font-size:12px;
-
-    font-weight:700;
+    font-size:13px;
 
     letter-spacing:.18em;
 
-    margin:0 0 18px;
-
 }
-
 
 .lc-oem-content h2{
 
-    color:var(--lc-navy);
+    color:#fff;
 
-    font-size:42px;
+    font-size:43px;
 
     line-height:1.5;
 
-    margin:0 0 28px;
+    margin:20px 0 30px;
 
 }
 
-
 .lc-oem-content > p{
 
-    color:var(--lc-text);
+    color:rgba(255,255,255,.80);
 
     font-size:16px;
 
@@ -1220,89 +1601,51 @@ body:has(.collagen-hero){
 
 }
 
-
 .lc-oem-points{
 
     display:grid;
 
-    grid-template-columns:
-        repeat(2,1fr);
+    grid-template-columns:1fr 1fr;
 
-    gap:12px;
+    gap:10px;
 
     margin:35px 0;
 
 }
 
-
 .lc-oem-point{
 
     display:flex;
 
+    gap:14px;
+
     align-items:center;
 
-    gap:15px;
+    padding:15px;
 
-    padding:14px 16px;
+    border:1px solid rgba(255,255,255,.15);
 
-    background:#fff;
-
-    border-radius:12px;
+    background:rgba(255,255,255,.06);
 
 }
-
 
 .lc-oem-point span{
 
-    color:var(--lc-gold);
+    color:var(--lc-gold-light);
 
-    font-family:
-        Georgia,
-        serif;
-
-    font-size:16px;
+    font-size:12px;
 
 }
-
 
 .lc-oem-point p{
 
     margin:0;
 
-    color:var(--lc-navy);
+    color:#fff;
 
     font-size:13px;
 
 }
-
-
-.lc-oem-image{
-
-    overflow:hidden;
-
-    border-radius:var(--lc-radius);
-
-    box-shadow:var(--lc-shadow);
-
-}
-
-
-.lc-oem-image img{
-
-    display:block;
-
-    width:100%;
-
-    height:540px;
-
-    object-fit:cover;
-
-}
-
-
-/* =========================================================
-   Gold Button
-========================================================= */
 
 .lc-gold-button{
 
@@ -1312,56 +1655,67 @@ body:has(.collagen-hero){
 
     justify-content:center;
 
-    gap:22px;
+    gap:14px;
 
-    min-height:56px;
+    min-height:54px;
 
-    padding:15px 30px;
-
-    border-radius:999px;
-
-    background:var(--lc-gold);
-
-    border:1px solid var(--lc-gold);
+    padding:14px 30px;
 
     color:#fff;
+
+    background:linear-gradient(
+        135deg,
+        var(--lc-gold),
+        #b99452
+    );
+
+    border:1px solid var(--lc-gold);
 
     text-decoration:none;
 
     font-size:14px;
 
-    font-weight:700;
-
-    letter-spacing:.04em;
-
-    transition:
-        transform .3s ease,
-        background .3s ease;
+    transition:.3s ease;
 
 }
-
-
-.lc-gold-button span{
-
-    font-size:18px;
-
-    transition:transform .3s ease;
-
-}
-
 
 .lc-gold-button:hover{
 
-    transform:translateY(-3px);
+    transform:translateY(-2px);
 
-    background:#b9985b;
+    box-shadow:0 15px 35px rgba(0,0,0,.20);
 
 }
 
+.lc-oem-image{
 
-.lc-gold-button:hover span{
+    position:relative;
 
-    transform:translateX(4px);
+}
+
+.lc-oem-image::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:20px -20px -20px 20px;
+
+    border:1px solid var(--lc-gold);
+
+    z-index:0;
+
+}
+
+.lc-oem-image img{
+
+    position:relative;
+
+    z-index:1;
+
+    width:100%;
+
+    display:block;
 
 }
 
@@ -1372,35 +1726,33 @@ body:has(.collagen-hero){
 
 .lc-brand-message{
 
-    position:relative;
-
-    padding:140px 0;
-
-    text-align:center;
-
-    color:#fff;
+    padding:145px 0;
 
     background:
 
-        linear-gradient(
-            rgba(105,48,63,.74),
-            rgba(105,48,63,.74)
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(229,208,163,.12),
+            transparent 30%
         ),
 
-        url("../images/raw_collagen.jpg")
-        center center / cover no-repeat;
+        linear-gradient(
+            135deg,
+            #542538,
+            var(--lc-rose-deep)
+        );
+
+    text-align:center;
 
 }
-
 
 .lc-brand-message-inner{
 
-    max-width:850px;
+    max-width:900px;
 
-    margin:auto;
+    margin:0 auto;
 
 }
-
 
 .lc-brand-message-label{
 
@@ -1408,43 +1760,37 @@ body:has(.collagen-hero){
 
     font-size:12px;
 
-    font-weight:700;
+    letter-spacing:.25em;
 
-    letter-spacing:.22em;
-
-    margin:0 0 22px;
+    margin:0 0 25px;
 
 }
 
-
 .lc-brand-message h2{
 
-    margin:0 0 28px;
+    color:#fff;
 
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+    font-size:clamp(42px,5vw,68px);
 
-    font-size:54px;
+    line-height:1.25;
 
-    line-height:1.3;
+    margin:0 0 35px;
 
     font-weight:500;
 
 }
 
+.lc-brand-message-inner > p:not(.lc-brand-message-label):not(.lc-brand-message-small){
 
-.lc-brand-message p:not(.lc-brand-message-label):not(.lc-brand-message-small){
+    color:#f5dfe6;
+
+    font-size:23px;
+
+    line-height:1.8;
 
     margin:0 0 25px;
 
-    font-size:25px;
-
-    line-height:1.7;
-
 }
-
 
 .lc-brand-message-small{
 
@@ -1452,7 +1798,7 @@ body:has(.collagen-hero){
 
     margin:0 auto;
 
-    color:rgba(255,255,255,.85);
+    color:rgba(255,255,255,.68);
 
     font-size:15px;
 
@@ -1469,87 +1815,65 @@ body:has(.collagen-hero){
 
     padding:120px 0;
 
-    background:#fff;
+    background:var(--lc-pink);
 
 }
-
 
 .lc-contact-inner{
 
     max-width:900px;
 
-    margin:auto;
-
-    padding:80px 50px;
+    margin:0 auto;
 
     text-align:center;
 
-    background:var(--lc-pink-light);
-
-    border:1px solid rgba(182,95,115,.10);
-
-    border-radius:30px;
-
 }
 
-
-.lc-contact .section-sub{
+.lc-contact-inner .section-sub{
 
     color:var(--lc-rose);
 
-    font-size:12px;
-
-    font-weight:700;
+    font-size:13px;
 
     letter-spacing:.18em;
 
-    margin:0 0 18px;
-
 }
 
-
-.lc-contact h2{
+.lc-contact-inner h2{
 
     color:var(--lc-navy);
 
-    font-size:34px;
+    font-size:40px;
 
-    line-height:1.65;
+    line-height:1.6;
 
-    margin:0 0 25px;
+    margin:20px 0 25px;
 
 }
-
 
 .lc-contact-inner > p{
 
-    color:var(--lc-text);
+    color:var(--lc-muted);
 
-    font-size:15px;
+    font-size:16px;
 
     line-height:2;
 
-    margin:0 auto 35px;
-
-    max-width:700px;
+    margin:0 0 35px;
 
 }
-
 
 .lc-contact-buttons{
 
     display:flex;
 
-    align-items:center;
-
     justify-content:center;
 
     flex-wrap:wrap;
 
-    gap:14px;
+    gap:15px;
 
 }
-
 
 .lc-outline-button{
 
@@ -1559,36 +1883,25 @@ body:has(.collagen-hero){
 
     justify-content:center;
 
-    min-height:56px;
+    min-height:54px;
 
-    min-width:180px;
-
-    padding:15px 28px;
-
-    border-radius:999px;
+    padding:14px 30px;
 
     color:var(--lc-rose-dark);
 
-    background:#fff;
-
     border:1px solid var(--lc-rose);
+
+    background:#fff;
 
     text-decoration:none;
 
     font-size:14px;
 
-    font-weight:700;
-
-    transition:
-        transform .3s ease,
-        background .3s ease;
+    transition:.3s ease;
 
 }
 
-
 .lc-outline-button:hover{
-
-    transform:translateY(-3px);
 
     color:#fff;
 
@@ -1603,32 +1916,27 @@ body:has(.collagen-hero){
 
 .lc-footer{
 
-    padding:75px 0 25px;
+    padding:70px 0 25px;
 
-    color:rgba(255,255,255,.8);
+    background:#172b35;
 
-    background:#152f3b;
+    color:#fff;
 
 }
-
 
 .lc-footer-grid{
 
     display:grid;
 
-    grid-template-columns:
-        1.5fr
-        1fr
-        1fr;
+    grid-template-columns:1.5fr 1fr 1fr;
 
     gap:60px;
 
-    padding-bottom:55px;
+    padding-bottom:50px;
 
-    border-bottom:1px solid rgba(255,255,255,.12);
+    border-bottom:1px solid rgba(255,255,255,.10);
 
 }
-
 
 .lc-footer-logo{
 
@@ -1644,7 +1952,6 @@ body:has(.collagen-hero){
 
 }
 
-
 .lc-footer-logo img{
 
     width:42px;
@@ -1653,91 +1960,73 @@ body:has(.collagen-hero){
 
 }
 
-
 .lc-footer-logo span{
 
     font-size:17px;
 
-    font-weight:700;
-
-    letter-spacing:.04em;
-
 }
-
 
 .lc-footer-brand > p{
 
-    margin:25px 0 0;
-
-    color:rgba(255,255,255,.8);
+    color:rgba(255,255,255,.55);
 
     font-size:14px;
 
-}
+    margin:20px 0 5px;
 
+}
 
 .lc-footer-brand .lc-footer-tagline{
 
-    margin-top:8px;
-
     color:var(--lc-gold-light);
 
-    font-family:
-        Georgia,
-        serif;
+    font-size:12px;
 
-    font-size:14px;
+    letter-spacing:.08em;
 
 }
-
 
 .lc-footer-title{
 
-    margin:0 0 20px;
-
-    color:#fff;
+    color:var(--lc-gold-light);
 
     font-size:11px;
 
-    font-weight:700;
+    letter-spacing:.16em;
 
-    letter-spacing:.15em;
+    margin:0 0 20px;
 
 }
-
 
 .lc-footer-links a{
 
     display:block;
 
-    margin-bottom:13px;
-
-    color:rgba(255,255,255,.68);
-
-    font-size:13px;
+    color:rgba(255,255,255,.65);
 
     text-decoration:none;
 
-    transition:
-        color .25s ease;
+    font-size:13px;
+
+    margin-bottom:12px;
+
+    transition:.25s;
 
 }
-
 
 .lc-footer-links a:hover{
 
-    color:var(--lc-gold-light);
+    color:#fff;
 
 }
-
 
 .lc-footer-bottom{
 
     display:flex;
 
-    align-items:center;
-
     justify-content:space-between;
+
+    align-items:center;
 
     gap:20px;
 
@@ -1745,23 +2034,18 @@ body:has(.collagen-hero){
 
 }
 
+.lc-footer-bottom p,
+.lc-footer-bottom a{
 
-.lc-footer-bottom p{
+    color:rgba(255,255,255,.45);
+
+    font-size:11px;
 
     margin:0;
 
-    color:rgba(255,255,255,.48);
-
-    font-size:11px;
-
 }
 
-
 .lc-footer-bottom a{
-
-    color:rgba(255,255,255,.58);
-
-    font-size:11px;
 
     text-decoration:none;
 
@@ -1774,22 +2058,33 @@ body:has(.collagen-hero){
 
 @media(max-width:1100px){
 
-    .collagen-hero h1{
+    .lc-support-grid{
 
-        font-size:64px;
-
-    }
-
-    .about-grid,
-    .lc-oem-inner{
-
-        gap:50px;
+        grid-template-columns:repeat(2,1fr);
 
     }
 
-    .lc-oem-content h2{
+    .lc-product-form-grid{
 
-        font-size:36px;
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .lc-product-form-card:last-child{
+
+        grid-column:1 / -1;
+
+        max-width:600px;
+
+        margin:0 auto;
+
+        width:100%;
+
+    }
+
+    .lc-hero-text{
+
+        max-width:760px;
 
     }
 
@@ -1798,57 +2093,41 @@ body:has(.collagen-hero){
 
 @media(max-width:900px){
 
-    .collagen-hero{
+    .lc-hero{
 
-        min-height:auto;
-
-    }
-
-
-    .hero-text{
-
-        padding:150px 0 100px;
-
-        max-width:100%;
+        min-height:560px;
 
     }
 
+    .lc-hero-text{
 
-    .collagen-hero h1{
-
-        font-size:56px;
-
-    }
-
-
-    .collagen-hero h2{
-
-        font-size:21px;
+        padding:130px 0 85px;
 
     }
 
-
-    .collagen-hero h3{
-
-        font-size:24px;
-
-    }
-
-
-    .about-grid,
+    .lc-about-grid,
+    .lc-daily-grid,
+    .lc-origin-grid,
+    .lc-oem-grid,
     .lc-oem-inner{
 
         grid-template-columns:1fr;
 
-    }
-
-
-    .about-image img{
-
-        height:450px;
+        gap:50px;
 
     }
 
+    .lc-about-image::after{
+
+        bottom:-15px;
+
+    }
+
+    .lc-support-grid{
+
+        grid-template-columns:1fr 1fr;
+
+    }
 
     .lc-quality-grid,
     .lc-evidence-grid{
@@ -1857,67 +2136,57 @@ body:has(.collagen-hero){
 
     }
 
-
     .lc-voice-grid{
 
         grid-template-columns:1fr;
 
     }
 
-
-    .lc-product-form-grid{
+    .lc-feature-grid{
 
         grid-template-columns:1fr;
 
     }
 
-
-    .lc-oem-image{
-
-        order:-1;
-
-    }
-
-
-    .lc-oem-image img{
-
-        height:450px;
-
-    }
-
-
     .lc-flow{
 
         flex-direction:column;
 
-    }
-
-
-    .lc-flow-line{
-
-        width:1px;
-
-        height:55px;
+        gap:0;
 
     }
-
 
     .lc-flow-item{
 
         width:100%;
 
-        max-width:360px;
+        max-width:400px;
 
     }
 
+    .lc-flow-line{
+
+        width:1px;
+
+        height:45px;
+
+    }
+
+    .lc-oem-image{
+
+        max-width:700px;
+
+        margin:0 auto;
+
+        width:100%;
+
+    }
 
     .lc-footer-grid{
 
-        grid-template-columns:
-            1fr 1fr;
+        grid-template-columns:1fr 1fr;
 
     }
-
 
     .lc-footer-brand{
 
@@ -1930,88 +2199,51 @@ body:has(.collagen-hero){
 
 @media(max-width:600px){
 
-    .lc-section-title{
+    .lc-hero{
 
-        margin-bottom:45px;
-
-    }
-
-
-    .lc-section-title h2{
-
-        font-size:30px;
+        min-height:600px;
 
     }
 
+    .lc-hero-text{
 
-    .lc-section-lead{
-
-        font-size:14px;
-
-        line-height:1.9;
+        padding:120px 0 75px;
 
     }
 
-
-    .collagen-hero{
-
-        background-position:
-            60% center;
-
-    }
-
-
-    .hero-text{
-
-        padding:125px 0 80px;
-
-    }
-
-
-    .hero-brand{
+    .lc-brand{
 
         font-size:11px;
 
+        letter-spacing:.12em;
+
     }
 
-
-    .collagen-hero h1{
+    .lc-hero h1{
 
         font-size:43px;
 
-        line-height:1.1;
+    }
+
+    .lc-hero h2{
+
+        font-size:24px;
 
     }
 
-
-    .collagen-hero h2{
-
-        margin:20px 0;
+    .lc-hero .lc-lead{
 
         font-size:18px;
 
     }
 
-
-    .collagen-hero h3{
-
-        font-size:21px;
-
-        line-height:1.7;
-
-    }
-
-
-    .collagen-hero .hero-text > p:not(.hero-brand){
+    .lc-hero-text > p:not(.lc-brand):not(.lc-lead){
 
         font-size:14px;
 
-        line-height:2;
-
     }
 
-
-    .hero-buttons{
+    .lc-buttons{
 
         flex-direction:column;
 
@@ -2019,16 +2251,36 @@ body:has(.collagen-hero){
 
     }
 
-
-    .btn-gold,
-    .btn-outline{
+    .lc-buttons a{
 
         width:100%;
 
     }
 
+    .lc-section-title{
 
-    .collagen-about,
+        margin-bottom:45px;
+
+    }
+
+    .lc-section-title h2{
+
+        font-size:31px;
+
+    }
+
+    .lc-section-lead{
+
+        font-size:14px;
+
+    }
+
+    .lc-about,
+    .lc-support,
+    .lc-daily,
+    .lc-origin,
+    .lc-features,
+    .lc-oem-intro,
     .lc-quality,
     .lc-quality-statement,
     .lc-evidence,
@@ -2036,27 +2288,20 @@ body:has(.collagen-hero){
     .lc-product-flow,
     .lc-product-forms,
     .lc-oem,
+    .lc-brand-message,
     .lc-contact{
 
         padding:80px 0;
 
     }
 
+    .lc-support-grid{
 
-    .about-image img{
-
-        height:330px;
-
-    }
-
-
-    .about-content h3{
-
-        font-size:28px;
+        grid-template-columns:1fr;
 
     }
 
-
+    .lc-feature-item,
     .lc-quality-card,
     .lc-evidence-card{
 
@@ -2064,49 +2309,33 @@ body:has(.collagen-hero){
 
     }
 
+    .lc-daily-content h2,
+    .lc-origin-content h2,
+    .lc-oem-content h2{
 
-    .lc-quality-card h3,
-    .lc-evidence-card h3{
-
-        font-size:21px;
-
-    }
-
-
-    .lc-quality-statement h2{
-
-        font-size:29px;
+        font-size:31px;
 
     }
 
+    .lc-product-form-grid{
 
-    .lc-voice-card{
-
-        padding:35px 27px;
+        grid-template-columns:1fr;
 
     }
 
+    .lc-product-form-card:last-child{
+
+        grid-column:auto;
+
+        max-width:none;
+
+    }
 
     .lc-product-form-image{
 
-        height:250px;
+        height:240px;
 
     }
-
-
-    .lc-product-form-content{
-
-        padding:28px 25px;
-
-    }
-
-
-    .lc-oem-content h2{
-
-        font-size:30px;
-
-    }
-
 
     .lc-oem-points{
 
@@ -2114,20 +2343,11 @@ body:has(.collagen-hero){
 
     }
 
-
-    .lc-oem-image img{
-
-        height:350px;
-
-    }
-
-
     .lc-brand-message{
 
         padding:100px 0;
 
     }
-
 
     .lc-brand-message h2{
 
@@ -2135,49 +2355,25 @@ body:has(.collagen-hero){
 
     }
 
+    .lc-contact-inner h2{
 
-    .lc-brand-message p:not(.lc-brand-message-label):not(.lc-brand-message-small){
-
-        font-size:21px;
-
-    }
-
-
-    .lc-contact-inner{
-
-        padding:55px 25px;
+        font-size:30px;
 
     }
-
-
-    .lc-contact h2{
-
-        font-size:27px;
-
-    }
-
 
     .lc-contact-buttons{
 
         flex-direction:column;
 
+        align-items:stretch;
+
     }
 
-
-    .lc-gold-button,
-    .lc-outline-button{
+    .lc-contact-buttons a{
 
         width:100%;
 
     }
-
-
-    .lc-footer{
-
-        padding-top:55px;
-
-    }
-
 
     .lc-footer-grid{
 
@@ -2187,19 +2383,36 @@ body:has(.collagen-hero){
 
     }
 
-
     .lc-footer-brand{
 
         grid-column:auto;
 
     }
 
-
     .lc-footer-bottom{
 
         flex-direction:column;
 
         align-items:flex-start;
+
+    }
+
+}
+
+
+/* =========================================================
+   Accessibility / Motion
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    .lc-support-card,
+    .lc-buttons a,
+    .lc-gold-button,
+    .lc-outline-button,
+    .lc-product-form-image img{
+
+        transition:none;
 
     }
 
