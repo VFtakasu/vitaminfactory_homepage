@@ -2291,10 +2291,11 @@ body{
 
     .lc-hero-text{
 
-        padding:120px 0 75px;
+        padding:100px 0 70px;
+
+        text-align:center;
 
     }
-
     .lc-brand{
 
         font-size:11px;
